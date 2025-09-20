@@ -34,22 +34,19 @@ void app_main(void) {
 adc_continuous_handle_t adc_config(void) {
     adc_continuous_handle_t handle = NULL;
 
-    // 1. Create ADC continuous handle
     adc_continuous_handle_cfg_t adc_handle_cfg = {
         .max_store_buf_size = BUF_SIZE,
         .conv_frame_size = FRAME_SIZE,
     };
     ESP_ERROR_CHECK(adc_continuous_new_handle(&adc_handle_cfg, &handle));
 
-    // 2. Define sampling pattern
     static adc_digi_pattern_config_t adc_pattern = {
-        .atten = ADC_ATTEN_DB_12,          // up to ~3.3V
-        .channel = ADC_CHANNEL_0,          // GPIO36
-        .unit = ADC_UNIT_1,                // use ADC1
-        .bit_width = ADC_BITWIDTH_12,      // 12 bits
+        .atten = ADC_ATTEN_DB_12,          
+        .channel = ADC_CHANNEL_0,          
+	.unit = ADC_UNIT_1,                
+        .bit_width = ADC_BITWIDTH_12,      
     };
 
-    // 3. Digital ADC configuration
     adc_continuous_config_t dig_cfg = {
         .sample_freq_hz = SAMPLE_FREQUENCY_HZ,
         .conv_mode = ADC_CONV_SINGLE_UNIT_1,
@@ -60,7 +57,6 @@ adc_continuous_handle_t adc_config(void) {
 
     ESP_ERROR_CHECK(adc_continuous_config(handle, &dig_cfg));
 
-    // 4. Start conversion
     ESP_ERROR_CHECK(adc_continuous_start(handle));
 
     return handle;
@@ -95,7 +91,7 @@ uint16_t adc_read(adc_continuous_handle_t handle) {
 float calculate_resistance(uint16_t raw_value) {
     float adc_voltage = ((float)raw_value / VCC_MAX_VALUE) * VCC;
     if (adc_voltage <= 0.0f) {
-        return -1.0f; // error
+        return -1.0f;
     }
     float resistance = FIXED_RESISTOR * ((VCC / adc_voltage) - 1.0f);
     return resistance;

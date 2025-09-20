@@ -1,7 +1,7 @@
 {
     "version":            "1.2",
     "project_name":       "adc",
-    "project_version":    "f5626ec",
+    "project_version":    "37df36b-dirty",
     "project_path":       "/home/pelvira/Documents/Universidad/7_Septimo_Semestre/SBC/hitos/hito_2/adc",
     "idf_path":           "/home/pelvira/esp/esp-idf",
     "build_dir":          "/home/pelvira/Documents/Universidad/7_Septimo_Semestre/SBC/hitos/hito_2/adc/build",

@@ -1,0 +1,129 @@
+Command: /home/pelvira/.espressif/python_env/idf5.5_py3.13_env/bin/python /home/pelvira/esp/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /home/pelvira/Documents/Universidad/7_Septimo_Semestre/SBC/hitos/hito_2/adc/build/adc.elf /home/pelvira/Documents/Universidad/7_Septimo_Semestre/SBC/hitos/hito_2/adc/build/bootloader/bootloader.elf -m '/home/pelvira/.espressif/python_env/idf5.5_py3.13_env/bin/python' '/home/pelvira/esp/esp-idf/tools/idf.py'
+[0;32mI (181) cpu_start: Multicore app[0m
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5.1-dirty 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Sep 20 2025 21:15:32[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (38) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0aca0h ( 44192) map[0m
+[0;32mI (104) esp_image: segment 1: paddr=0001acc8 vaddr=3ffb0000 size=02438h (  9272) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=0001d108 vaddr=40080000 size=02f10h ( 12048) load[0m
+[0;32mI (112) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=15944h ( 88388) map[0m
+[0;32mI (145) esp_image: segment 4: paddr=0003596c vaddr=40082f10 size=0b0c8h ( 45256) load[0m
+[0;32mI (163) esp_image: segment 5: paddr=00040a3c vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (170) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (170) boot: Disabling RNG early entropy source...[0m
+[0;32mI (181) cpu_start: Multicore app[0m
+[0;32mI (190) cpu_start: Pro cpu start user code[0m
+[0;32mI (190) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (190) app_init: Application information:[0m
+[0;32mI (190) app_init: Project name:     adc[0m
+[0;32mI (193) app_init: App version:      37df36b-dirty[0m
+[0;32mI (198) app_init: Compile time:     Sep 20 2025 23:11:55[0m
+[0;32mI (203) app_init: ELF file SHA256:  036dc2811...[0m
+[0;32mI (207) app_init: ESP-IDF:          v5.5.1-dirty[0m
+[0;32mI (211) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (215) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (219) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (223) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (230) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (234) heap_init: At 3FFB2D10 len 0002D2F0 (180 KiB): DRAM[0m
+[0;32mI (240) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (245) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (251) heap_init: At 4008DFD8 len 00012028 (72 KiB): IRAM[0m
+[0;33mW (257) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;32mI (269) spi_flash: detected chip: generic[0m
+[0;32mI (273) spi_flash: flash io: dio[0m
+[0;33mW (275) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (288) main_task: Started on CPU0[0m
+[0;32mI (298) main_task: Calling app_main()[0m
+[0;32mI (308) ADC_CONT: Average resistance: 15.42K[0m
+[0;32mI (808) ADC_CONT: Average resistance: 15.50K[0m
+[0;32mI (1308) ADC_CONT: Average resistance: 15.56K[0m
+[0;32mI (1808) ADC_CONT: Average resistance: 15.63K[0m
+[0;32mI (2308) ADC_CONT: Average resistance: 15.66K[0m
+[0;32mI (2808) ADC_CONT: Average resistance: 15.61K[0m
+[0;32mI (3308) ADC_CONT: Average resistance: 13.92K[0m
+[0;32mI (3808) ADC_CONT: Average resistance: 14.16K[0m
+[0;32mI (4308) ADC_CONT: Average resistance: 14.65K[0m
+[0;32mI (4808) ADC_CONT: Average resistance: 13.41K[0m
+[0;32mI (5308) ADC_CONT: Average resistance: 14.77K[0m
+[0;32mI (5808) ADC_CONT: Average resistance: 13.49K[0m
+[0;32mI (6308) ADC_CONT: Average resistance: 14.16K[0m
+[0;32mI (6808) ADC_CONT: Average resistance: 11.54K[0m
+[0;32mI (7308) ADC_CONT: Average resistance: 11.71K[0m
+[0;32mI (7808) ADC_CONT: Average resistance: 14.68K[0m
+[0;32mI (8308) ADC_CONT: Average resistance: 12.94K[0m
+[0;32mI (8808) ADC_CONT: Average resistance: 10.71K[0m
+[0;32mI (9308) ADC_CONT: Average resistance: 13.41K[0m
+[0;32mI (9808) ADC_CONT: Average resistance: 13.70K[0m
+[0;32mI (10308) ADC_CONT: Average resistance: 13.53K[0m
+[0;32mI (10808) ADC_CONT: Average resistance: 13.27K[0m
+[0;32mI (11308) ADC_CONT: Average resistance: 13.08K[0m
+[0;32mI (11808) ADC_CONT: Average resistance: 13.23K[0m
+[0;32mI (12308) ADC_CONT: Average resistance: 12.67K[0m
+[0;32mI (12808) ADC_CONT: Average resistance: 15.00K[0m
+[0;32mI (13308) ADC_CONT: Average resistance: 13.91K[0m
+[0;32mI (13808) ADC_CONT: Average resistance: 14.07K[0m
+[0;32mI (14308) ADC_CONT: Average resistance: 13.75K[0m
+[0;32mI (14808) ADC_CONT: Average resistance: 13.88K[0m
+[0;32mI (15308) ADC_CONT: Average resistance: 13.73K[0m
+[0;32mI (15808) ADC_CONT: Average resistance: 13.92K[0m
+[0;32mI (16308) ADC_CONT: Average resistance: 13.98K[0m
+[0;32mI (16808) ADC_CONT: Average resistance: 13.20K[0m
+[0;32mI (17308) ADC_CONT: Average resistance: 13.86K[0m
+[0;32mI (17808) ADC_CONT: Average resistance: 14.58K[0m
+[0;32mI (18308) ADC_CONT: Average resistance: 13.07K[0m
+[0;32mI (18808) ADC_CONT: Average resistance: 13.48K[0m
+[0;32mI (19308) ADC_CONT: Average resistance: 13.66K[0m
+[0;32mI (19808) ADC_CONT: Average resistance: 13.49K[0m
+[0;32mI (20308) ADC_CONT: Average resistance: 14.80K[0m
+[0;32mI (20808) ADC_CONT: Average resistance: 15.12K[0m
+[0;32mI (21308) ADC_CONT: Average resistance: 15.51K[0m
+[0;32mI (21808) ADC_CONT: Average resistance: 15.37K[0m
+[0;32mI (22308) ADC_CONT: Average resistance: 18.80K[0m
+[0;32mI (22808) ADC_CONT: Average resistance: 29.34K[0m
+[0;32mI (23308) ADC_CONT: Average resistance: 196.82K[0m
+[0;32mI (23808) ADC_CONT: Average resistance: 245.94K[0m
+[0;32mI (24308) ADC_CONT: Average resistance: 177.84K[0m
+[0;32mI (24808) ADC_CONT: Average resistance: 205.53K[0m
+[0;32mI (25308) ADC_CONT: Average resistance: 210.16K[0m
+[0;32mI (25808) ADC_CONT: Average resistance: 218.77K[0m
+[0;32mI (26308) ADC_CONT: Average resistance: 218.77K[0m
+[0;32mI (26808) ADC_CONT: Average resistance: 224.00K[0m
+[0;32mI (27308) ADC_CONT: Average resistance: 222.67K[0m
+[0;32mI (27808) ADC_CONT: Average resistance: 225.34K[0m
+[0;32mI (28308) ADC_CONT: Average resistance: 218.77K[0m
+[0;32mI (28808) ADC_CONT: Average resistance: 222.67K[0m
+[0;32mI (29308) ADC_CONT: Average resistance: 18.07K[0m
+[0;32mI (29808) ADC_CONT: Average resistance: 16.30K[0m
+[0;32mI (30308) ADC_CONT: Average resistance: 15.47K[0m
+[0;32mI (30808) ADC_CONT: Average resistance: 15.66K[0m
+[0;32mI (31308) ADC_CONT: Average resistance: 15.40K[0m
+[0;32mI (31808) ADC_CONT: Average resistance: 15.32K[0m
+[0;32mI (32308) ADC_CONT: Average resistance: 15.43K[0m
+[0;32mI (32808) ADC_CONT: Average resistance: 15.85K[0m
+[0;32mI (33308) ADC_CONT: Average resistance: 15.90K[0m
+[0;32mI (33808) ADC_CONT: Average resistance: 15.87K[0m
+[0;32mI (34308) ADC_CONT: Average resistance: 15.59K[0m
+[0;32mI (34808) ADC_
