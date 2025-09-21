@@ -4,6 +4,7 @@
 #include "esp_adc/adc_continuous.h"
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
+#include "driver/gpio.h"
 
 #define TAG "ADC_CONT"
 #define BUF_SIZE 1024
@@ -28,6 +29,7 @@
 #define DIG_COMMON_4 27
 #define NUMBER_OF_DISPLAYS 4
 #define SEGMENTS_PER_DISPLAY 8
+
 const uint8_t digits[10][8] = {
     {1,1,1,1,1,1,0,0}, // 0
     {0,1,1,0,0,0,0,0}, // 1
@@ -41,10 +43,23 @@ const uint8_t digits[10][8] = {
     {1,1,1,1,0,1,1,0}  // 9
 };
 
-gpio_num_t seg_pins[8] = {SEG_A, SEG_B, SEG_C, SEG_D, SEG_E, SEG_F, SEG_G, SEG_DP};
-gpio_num_t dig_common_pins = {DIG_COMMON_1,DIG_COMMON_2,DIG_COMMON_3,DIG_COMMON_4};
+gpio_num_t seg_pins[SEGMENTS_PER_DISPLAY] = {
+	SEG_A,
+	SEG_B,
+	SEG_C,
+	SEG_D,
+	SEG_E,
+	SEG_F,
+	SEG_G,
+	SEG_POINT};
+gpio_num_t dig_common_pins[NUMBER_OF_DISPLAYS] = {
+	DIG_COMMON_1,
+	DIG_COMMON_2,
+	DIG_COMMON_3,
+	DIG_COMMON_4
+};
 
-static uint8_t display_buffer[NUMER_OF_DISPLAYS][SEGMENTS_PER_DISPLAY];
+static uint8_t display_buffer[NUMBER_OF_DISPLAYS][SEGMENTS_PER_DISPLAY];
 
 adc_continuous_handle_t adc_config(void);
 uint16_t adc_read(adc_continuous_handle_t);
