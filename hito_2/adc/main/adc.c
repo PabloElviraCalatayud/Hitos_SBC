@@ -14,9 +14,43 @@
 #define VCC_MAX_VALUE 4095.0
 #define FIXED_RESISTOR 10000.0 // 10kΩ reference resistor
 
+#define SEG_A  2
+#define SEG_B  4
+#define SEG_C  5
+#define SEG_D  18
+#define SEG_E  19
+#define SEG_F  21
+#define SEG_G  22
+#define SEG_POINT 23
+#define DIG_COMMON_1 12
+#define DIG_COMMON_2 13
+#define DIG_COMMON_3 14
+#define DIG_COMMON_4 27
+#define NUMBER_OF_DISPLAYS 4
+#define SEGMENTS_PER_DISPLAY 8
+const uint8_t digits[10][8] = {
+    {1,1,1,1,1,1,0,0}, // 0
+    {0,1,1,0,0,0,0,0}, // 1
+    {1,1,0,1,1,0,1,0}, // 2
+    {1,1,1,1,0,0,1,0}, // 3
+    {0,1,1,0,0,1,1,0}, // 4
+    {1,0,1,1,0,1,1,0}, // 5
+    {1,0,1,1,1,1,1,0}, // 6
+    {1,1,1,0,0,0,0,0}, // 7
+    {1,1,1,1,1,1,1,0}, // 8
+    {1,1,1,1,0,1,1,0}  // 9
+};
+
+gpio_num_t seg_pins[8] = {SEG_A, SEG_B, SEG_C, SEG_D, SEG_E, SEG_F, SEG_G, SEG_DP};
+gpio_num_t dig_common_pins = {DIG_COMMON_1,DIG_COMMON_2,DIG_COMMON_3,DIG_COMMON_4};
+
+static uint8_t display_buffer[NUMER_OF_DISPLAYS][SEGMENTS_PER_DISPLAY];
+
 adc_continuous_handle_t adc_config(void);
 uint16_t adc_read(adc_continuous_handle_t);
 float calculate_resistance(uint16_t);
+
+void configure_segment_display();
 
 void app_main(void) {
     adc_continuous_handle_t adc_handle = adc_config();
@@ -95,5 +129,16 @@ float calculate_resistance(uint16_t raw_value) {
     }
     float resistance = FIXED_RESISTOR * ((VCC / adc_voltage) - 1.0f);
     return resistance;
+}
+
+void configure_segment_display(){
+	for(int i = 0; i < SEGMENTS_PER_DISPLAY; i++){
+		gpio_reset_pin(seg_pins[i]);
+		gpio_set_direction(seg_pins[i],GPIO_MODE_OUTPUT);
+	}
+	for(int i = 0; i < NUMBER_OF_DISPLAYS; i++){
+		gpio_reset_pin(dig_common_pins[i]);
+		gpio_set_direction(dig_common_pins[i],GPIO_MODE_OUTPUT);
+	}
 }
 
