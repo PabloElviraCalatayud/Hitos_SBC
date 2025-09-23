@@ -27,6 +27,7 @@
 
 #define BCD_WEIGHTS 4
 
+#define N 2 //number of digits we are extracting(tens & units);
 
 gpio_num_t pins_display_1[BCD_WEIGHTS] = {
 	SEG_A_1,
@@ -47,17 +48,30 @@ uint16_t adc_read(adc_continuous_handle_t);
 float calculate_resistance(uint16_t);
 
 void configure_segment_display(gpio_num_t *);
+void write_bcd_digit(uint8_t, gpio_num_t *);
+void get_digits(uint8_t, uint8_t [N]);
 
 void app_main(void) {
     adc_continuous_handle_t adc_handle = adc_config();
 
+    configure_segment_display(pins_display_1);
+    configure_segment_display(pins_display_2);
+
     while (1) {
         uint16_t raw_value = adc_read(adc_handle);
         float resistance = calculate_resistance(raw_value);
-	resistance /= 1000;
+        resistance /= 1000;
         ESP_LOGI(TAG, "Average resistance: %.2fK", resistance);
         float adc_voltage = ((float)raw_value / VCC_MAX_VALUE) * VCC;
         //ESP_LOGI(TAG, "Raw: %d, Voltage: %.3f V", raw_value, adc_voltage);
+
+        uint8_t value = (uint8_t)(resistance); // solo parte entera en KΩ
+        uint8_t digits[N];
+        get_digits(value, digits);
+
+        write_bcd_digit(digits[0], pins_display_1); // decenas
+        write_bcd_digit(digits[1], pins_display_2); // unidades
+
         vTaskDelay(pdMS_TO_TICKS(500));
     }
 }
@@ -146,3 +160,15 @@ void configure_segment_display(gpio_num_t *pins){
     gpio_set_direction(pins[i],GPIO_MODE_OUTPUT);
   }
 }
+
+void write_bcd_digit(uint8_t digit, gpio_num_t *pins){
+  for (int i = 0; i < 4; i++) {
+    int bit = (digit >> i) & 0x01;
+    gpio_set_level(pins[i], bit);
+  }
+}
+
+void get_digits(uint8_t value, uint8_t digits[N]){
+  digits[0] = value / 10;
+  digits[1] = value % 10;
+} 
