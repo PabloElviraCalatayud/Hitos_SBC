@@ -1,3 +1,4 @@
+#include <string.h>
 #include <stdio.h>
 #include <stdint.h>
 #include "esp_log.h"
@@ -15,10 +16,10 @@
 #define VCC_MAX_VALUE 4095.0
 #define FIXED_RESISTOR 10000.0 // 10kΩ reference resistor
 
-#define SEG_A_1 6
-#define SEG_B_1 7
-#define SEG_C_1 8
-#define SEG_D_1 9
+#define SEG_A_1 2
+#define SEG_B_1 4
+#define SEG_C_1 5
+#define SEG_D_1 12
 
 #define SEG_A_2 18
 #define SEG_B_2 19
@@ -26,6 +27,7 @@
 #define SEG_D_2 22
 
 #define BCD_WEIGHTS 4
+#define N 2
 
 
 gpio_num_t pins_display_1[BCD_WEIGHTS] = {
@@ -47,6 +49,7 @@ uint16_t adc_read(adc_continuous_handle_t);
 float calculate_resistance(uint16_t);
 
 void configure_segment_display(gpio_num_t *);
+void write_bcd_digit(uint8_t, gpio_num_t *);
 
 void app_main(void) {
     adc_continuous_handle_t adc_handle = adc_config();
@@ -57,7 +60,14 @@ void app_main(void) {
 	resistance /= 1000;
         ESP_LOGI(TAG, "Average resistance: %.2fK", resistance);
         float adc_voltage = ((float)raw_value / VCC_MAX_VALUE) * VCC;
-        //ESP_LOGI(TAG, "Raw: %d, Voltage: %.3f V", raw_value, adc_voltage);
+        ESP_LOGI(TAG, "Raw: %d, Voltage: %.3f V", raw_value, adc_voltage);
+        uint8_t value = (uint8_t)(resistance); // solo parte entera en KΩ
+        uint8_t digits[N];
+        digits[0] = value / 10;
+        digits[1] = value % 10;
+        write_bcd_digit(digits[0], pins_display_1); // decenas
+        write_bcd_digit(digits[1], pins_display_2); // unidades
+
         vTaskDelay(pdMS_TO_TICKS(500));
     }
 }
@@ -140,9 +150,17 @@ float calculate_resistance(uint16_t raw_value) {
     return FIXED_RESISTOR * (v_adc / (vcc - v_adc));
 }
 
-void configure_segment_display(gpio_num_t *pins){
-  for(int i = 0; i < BCD_WEIGHTS; i++){
-    gpio_reset_pin(pins[i]);
-    gpio_set_direction(pins[i],GPIO_MODE_OUTPUT);
-  }
-}
+	void configure_segment_display(gpio_num_t *pins){
+	  for(int i = 0; i < BCD_WEIGHTS; i++){
+		gpio_reset_pin(pins[i]);
+		gpio_set_direction(pins[i],GPIO_MODE_OUTPUT);
+	  }
+	}
+
+	  void write_bcd_digit(uint8_t digit, gpio_num_t *pins){
+		  for (int i = 0; i < 4; i++) {
+			  int bit = (digit >> i) & 0x01;
+			  gpio_set_level(pins[i], bit);
+		  }
+	  }
+
