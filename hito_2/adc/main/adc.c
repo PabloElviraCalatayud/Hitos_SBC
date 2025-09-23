@@ -15,43 +15,30 @@
 #define VCC_MAX_VALUE 4095.0
 #define FIXED_RESISTOR 10000.0 // 10kΩ reference resistor
 
-#define SEG_A  2
-#define SEG_B  4
-#define SEG_C  5
-#define SEG_D  18
-#define SEG_E  19
-#define SEG_F  21
-#define SEG_G  22
-#define SEG_POINT 23
-#define DIG_COMMON_1 12
-#define DIG_COMMON_2 13
-#define DIG_COMMON_3 14
-#define DIG_COMMON_4 27
-#define NUMBER_OF_DISPLAYS 4
-#define SEGMENTS_PER_DISPLAY 8
+#define SEG_A_1 6
+#define SEG_B_1 7
+#define SEG_C_1 8
+#define SEG_D_1 9
 
-const uint8_t digits[10][8] = {
-    {1,1,1,1,1,1,0,0}, // 0
-    {0,1,1,0,0,0,0,0}, // 1
-    {1,1,0,1,1,0,1,0}, // 2
-    {1,1,1,1,0,0,1,0}, // 3
-    {0,1,1,0,0,1,1,0}, // 4
-    {1,0,1,1,0,1,1,0}, // 5
-    {1,0,1,1,1,1,1,0}, // 6
-    {1,1,1,0,0,0,0,0}, // 7
-    {1,1,1,1,1,1,1,0}, // 8
-    {1,1,1,1,0,1,1,0}  // 9
-};
+#define SEG_A_2 18
+#define SEG_B_2 19
+#define SEG_C_2 21
+#define SEG_D_2 22
+
+#define NUMBER_OF_DISPLAYS 2
+#define SEGMENTS_PER_DISPLAY 4
+
 
 gpio_num_t seg_pins[SEGMENTS_PER_DISPLAY] = {
-	SEG_A,
-	SEG_B,
-	SEG_C,
-	SEG_D,
-	SEG_E,
-	SEG_F,
-	SEG_G,
-	SEG_POINT};
+	SEG_A_1,
+	SEG_B_1,
+	SEG_C_1,
+	SEG_D_1,
+  SEG_A_2,
+  SEG_B_2,
+  SEG_C_2,
+  SEG_D_2
+};
 gpio_num_t dig_common_pins[NUMBER_OF_DISPLAYS] = {
 	DIG_COMMON_1,
 	DIG_COMMON_2,
@@ -154,8 +141,7 @@ float calculate_resistance(uint16_t raw_value) {
     }
     if (v_adc >= vcc) {
         return -1.0f; // oscuridad total → resistencia → ∞
-    }
-
+  }
     // Fórmula para pull-up
     return FIXED_RESISTOR * (v_adc / (vcc - v_adc));
 }
