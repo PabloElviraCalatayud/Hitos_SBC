@@ -1,0 +1,249 @@
+Command: /home/pelvira/.espressif/python_env/idf5.5_py3.13_env/bin/python /home/pelvira/esp/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /home/pelvira/Documents/Universidad/7_Septimo_Semestre/SBC/hitos/hito_2/adc/build/adc.elf /home/pelvira/Documents/Universidad/7_Septimo_Semestre/SBC/hitos/hito_2/adc/build/bootloader/bootloader.elf -m '/home/pelvira/.espressif/python_env/idf5.5_py3.13_env/bin/python' '/home/pelvira/esp/esp-idf/tools/idf.py'
+d boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5.1-dirty 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Sep 22 2025 22:50:33[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v1.0[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0ac90h ( 44176) map[0m
+[0;32mI (103) esp_image: segment 1: paddr=0001acb8 vaddr=3ffb0000 size=02438h (  9272) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=0001d0f8 vaddr=40080000 size=02f20h ( 12064) load[0m
+[0;32mI (112) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=15830h ( 88112) map[0m
+[0;32mI (145) esp_image: segment 4: paddr=00035858 vaddr=40082f20 size=0b0b8h ( 45240) load[0m
+[0;32mI (163) esp_image: segment 5: paddr=00040918 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (170) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (170) boot: Disabling RNG early entropy source...[0m
+[0;32mI (181) cpu_start: Multicore app[0m
+[0;32mI (189) cpu_start: Pro cpu start user code[0m
+[0;32mI (189) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (189) app_init: Application information:[0m
+[0;32mI (189) app_init: Project name:     adc[0m
+[0;32mI (193) app_init: App version:      16923ba[0m
+[0;32mI (197) app_init: Compile time:     Sep 22 2025 22:50:24[0m
+[0;32mI (202) app_init: ELF file SHA256:  e296f69fb...[0m
+[0;32mI (206) app_init: ESP-IDF:          v5.5.1-dirty[0m
+[0;32mI (210) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (214) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (218) efuse_init: Chip rev:         v1.0[0m
+[0;32mI (222) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (228) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (233) heap_init: At 3FFB2D10 len 0002D2F0 (180 KiB): DRAM[0m
+[0;32mI (239) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (244) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (250) heap_init: At 4008DFD8 len 00012028 (72 KiB): IRAM[0m
+[0;33mW (256) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;32mI (268) spi_flash: detected chip: generic[0m
+[0;32mI (271) spi_flash: flash io: dio[0m
+[0;33mW (274) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (287) main_task: Started on CPU0[0m
+[0;32mI (297) main_task: Calling app_main()[0m
+[0;32mI (307) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (807) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (1307) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (1807) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (2307) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (2807) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (3307) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (3807) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (4307) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (4807) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (5307) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (5807) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (6307) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (6807) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (7307) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (7807) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (8307) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (8807) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (9307) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (9807) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (10307) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (10807) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (11307) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (11807) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (12307) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (12807) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (13307) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (13807) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (14307) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (14807) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (15307) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (15807) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (16307) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (16807) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (17307) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (17807) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (18307) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (18807) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (19307) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (19807) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (20307) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (20807) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (21307) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (21807) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (22307) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (22807) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (23307) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (23807) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (24307) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (24807) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (25307) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (25807) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (26307) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (26807) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (27307) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (27807) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (28307) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (28807) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (29307) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (29807) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (30307) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (30807) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (31307) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (31807) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (32307) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (32807) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (33307) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (33807) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (34307) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (34807) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (35307) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (35807) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (36307) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (36807) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (37307) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (37807) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (38307) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (38807) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (39307) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (39807) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (40307) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (40807) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (41307) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (41807) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (42307) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (42807) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (43307) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (43807) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (44307) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (44807) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (45307) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (45807) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (46307) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (46807) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (47307) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (47807) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (48307) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (48807) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (49307) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (49807) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (50307) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (50807) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (51307) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (51807) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (52307) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (52807) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (53307) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (53807) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (54307) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (54807) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (55307) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (55807) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (56307) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (56807) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (57307) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (57807) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (58307) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (58807) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (59307) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (59807) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (60307) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (60807) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (61307) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (61807) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (62307) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (62807) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (63307) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (63807) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (64307) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (64807) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (65307) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (65807) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (66307) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (66807) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (67307) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (67807) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (68307) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (68807) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (69307) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (69807) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (70307) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (70807) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (71307) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (71807) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (72307) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (72807) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (73307) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (73807) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (74307) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (74807) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (75307) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (75807) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (76307) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (76807) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (77307) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (77807) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (78307) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (78807) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (79307) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (79807) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (80307) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (80807) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (81307) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (81807) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (82307) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (82807) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (83307) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (83807) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (84307) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (84807) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (85307) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (85807) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (86307) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (86807) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (87307) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (87807) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (88307) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (88807) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (89307) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (89807) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (90307) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (90807) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (91307) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (91807) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (92307) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (92807) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (93307) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (93807) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (94307) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (94807) ADC_CONT: Average Voltage: 0.000000[0m
+[0;32mI (95307) ADC_CONT: Average Voltage: 0.000000[0m

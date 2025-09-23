@@ -75,7 +75,8 @@ void app_main(void) {
         float resistance = calculate_resistance(raw_value);
 	resistance /= 1000;
         ESP_LOGI(TAG, "Average resistance: %.2fK", resistance);
-
+        float adc_voltage = ((float)raw_value / VCC_MAX_VALUE) * VCC;
+        //ESP_LOGI(TAG, "Raw: %d, Voltage: %.3f V", raw_value, adc_voltage);
         vTaskDelay(pdMS_TO_TICKS(500));
     }
 }
@@ -138,12 +139,25 @@ uint16_t adc_read(adc_continuous_handle_t handle) {
 }
 
 float calculate_resistance(uint16_t raw_value) {
-    float adc_voltage = ((float)raw_value / VCC_MAX_VALUE) * VCC;
-    if (adc_voltage <= 0.0f) {
+    const float adc_max = VCC_MAX_VALUE; // 4095.0
+    const float vcc = VCC;               // 3.3
+
+    if (raw_value > (uint16_t)adc_max){
         return -1.0f;
     }
-    float resistance = FIXED_RESISTOR * ((VCC / adc_voltage) - 1.0f);
-    return resistance;
+
+
+    float v_adc = ((float)raw_value / adc_max) * vcc;
+
+    if (v_adc <= 0.0f) {
+        return 0.0f; // luz muy intensa → resistencia ≈ 0
+    }
+    if (v_adc >= vcc) {
+        return -1.0f; // oscuridad total → resistencia → ∞
+    }
+
+    // Fórmula para pull-up
+    return FIXED_RESISTOR * (v_adc / (vcc - v_adc));
 }
 
 void configure_segment_display(){
