@@ -25,34 +25,28 @@
 #define SEG_C_2 21
 #define SEG_D_2 22
 
-#define NUMBER_OF_DISPLAYS 2
-#define SEGMENTS_PER_DISPLAY 4
+#define BCD_WEIGHTS 4
 
 
-gpio_num_t seg_pins[SEGMENTS_PER_DISPLAY] = {
+gpio_num_t pins_display_1[BCD_WEIGHTS] = {
 	SEG_A_1,
 	SEG_B_1,
 	SEG_C_1,
-	SEG_D_1,
+	SEG_D_1
+};
+
+gpio_num_t pins_display_2[BCD_WEIGHTS] = {
   SEG_A_2,
   SEG_B_2,
   SEG_C_2,
   SEG_D_2
 };
-gpio_num_t dig_common_pins[NUMBER_OF_DISPLAYS] = {
-	DIG_COMMON_1,
-	DIG_COMMON_2,
-	DIG_COMMON_3,
-	DIG_COMMON_4
-};
-
-static uint8_t display_buffer[NUMBER_OF_DISPLAYS][SEGMENTS_PER_DISPLAY];
 
 adc_continuous_handle_t adc_config(void);
 uint16_t adc_read(adc_continuous_handle_t);
 float calculate_resistance(uint16_t);
 
-void configure_segment_display();
+void configure_segment_display(gpio_num_t *);
 
 void app_main(void) {
     adc_continuous_handle_t adc_handle = adc_config();
@@ -146,14 +140,9 @@ float calculate_resistance(uint16_t raw_value) {
     return FIXED_RESISTOR * (v_adc / (vcc - v_adc));
 }
 
-void configure_segment_display(){
-	for(int i = 0; i < SEGMENTS_PER_DISPLAY; i++){
-		gpio_reset_pin(seg_pins[i]);
-		gpio_set_direction(seg_pins[i],GPIO_MODE_OUTPUT);
-	}
-	for(int i = 0; i < NUMBER_OF_DISPLAYS; i++){
-		gpio_reset_pin(dig_common_pins[i]);
-		gpio_set_direction(dig_common_pins[i],GPIO_MODE_OUTPUT);
-	}
+void configure_segment_display(gpio_num_t *pins){
+  for(int i = 0; i < BCD_WEIGHTS; i++){
+    gpio_reset_pin(pins[i]);
+    gpio_set_direction(pins[i],GPIO_MODE_OUTPUT);
+  }
 }
-
