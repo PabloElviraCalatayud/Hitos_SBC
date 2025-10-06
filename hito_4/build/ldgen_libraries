@@ -158,4 +158,5 @@
 /home/pelvira/Documents/Universidad/7_Septimo_Semestre/SBC/Hitos_SBC/hito_4/build/esp-idf/wifi_provisioning/libwifi_provisioning.a
 /home/pelvira/Documents/Universidad/7_Septimo_Semestre/SBC/Hitos_SBC/hito_4/build/esp-idf/json/libjson.a
 /home/pelvira/Documents/Universidad/7_Septimo_Semestre/SBC/Hitos_SBC/hito_4/build/esp-idf/main/libmain.a
-/home/pelvira/Documents/Universidad/7_Septimo_Semestre/SBC/Hitos_SBC/hito_4/build/esp-idf/ssd1306/libssd1306.a
+/home/pelvira/Documents/Universidad/7_Septimo_Semestre/SBC/Hitos_SBC/hito_4/build/esp-idf/mqtt/libmqtt.a
+/home/pelvira/Documents/Universidad/7_Septimo_Semestre/SBC/Hitos_SBC/hito_4/build/esp-idf/spiffs/libspiffs.a

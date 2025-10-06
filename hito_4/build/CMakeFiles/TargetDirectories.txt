@@ -845,10 +845,3 @@
 /home/pelvira/Documents/Universidad/7_Septimo_Semestre/SBC/Hitos_SBC/hito_4/build/esp-idf/main/CMakeFiles/install.dir
 /home/pelvira/Documents/Universidad/7_Septimo_Semestre/SBC/Hitos_SBC/hito_4/build/esp-idf/main/CMakeFiles/install/local.dir
 /home/pelvira/Documents/Universidad/7_Septimo_Semestre/SBC/Hitos_SBC/hito_4/build/esp-idf/main/CMakeFiles/install/strip.dir
-/home/pelvira/Documents/Universidad/7_Septimo_Semestre/SBC/Hitos_SBC/hito_4/build/esp-idf/ssd1306/CMakeFiles/__idf_ssd1306.dir
-/home/pelvira/Documents/Universidad/7_Septimo_Semestre/SBC/Hitos_SBC/hito_4/build/esp-idf/ssd1306/CMakeFiles/edit_cache.dir
-/home/pelvira/Documents/Universidad/7_Septimo_Semestre/SBC/Hitos_SBC/hito_4/build/esp-idf/ssd1306/CMakeFiles/rebuild_cache.dir
-/home/pelvira/Documents/Universidad/7_Septimo_Semestre/SBC/Hitos_SBC/hito_4/build/esp-idf/ssd1306/CMakeFiles/list_install_components.dir
-/home/pelvira/Documents/Universidad/7_Septimo_Semestre/SBC/Hitos_SBC/hito_4/build/esp-idf/ssd1306/CMakeFiles/install.dir
-/home/pelvira/Documents/Universidad/7_Septimo_Semestre/SBC/Hitos_SBC/hito_4/build/esp-idf/ssd1306/CMakeFiles/install/local.dir
-/home/pelvira/Documents/Universidad/7_Septimo_Semestre/SBC/Hitos_SBC/hito_4/build/esp-idf/ssd1306/CMakeFiles/install/strip.dir

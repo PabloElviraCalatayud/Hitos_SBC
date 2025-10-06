@@ -21,7 +21,7 @@ esp_err_t adc_driver_init(adc_continuous_handle_t *out_handle) {
   adc_digi_pattern_config_t pattern[num_channels];
 
   for (int i = 0; i < num_channels; i++) {
-    pattern[i].atten = ADC_ATTEN_DB_11;
+    pattern[i].atten = ADC_ATTEN_DB_12;
     pattern[i].channel = adc_channels[i];
     pattern[i].unit = ADC_UNIT_1;
     pattern[i].bit_width = ADC_BITWIDTH_12;
