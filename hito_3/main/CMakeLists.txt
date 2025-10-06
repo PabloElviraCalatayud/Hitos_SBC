@@ -1,0 +1,8 @@
+idf_component_register(
+    SRCS
+        "main.c"
+        "wifi_manager.c"
+        "ldr_monitor.c"
+    INCLUDE_DIRS "."
+)
+
