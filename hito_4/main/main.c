@@ -8,11 +8,20 @@
 #include "freertos/task.h"
 #include "esp_log.h"
 
-#define MQTT_BROKER "mqtt://demo.thingsboard.io"
-#define MQTT_TOKEN  "TU_TOKEN_AQUI"
+#define MQTT_BROKER "mqtt://192.168.1.89:1885"
+#define MQTT_TOKEN  "udnencgtn1l728eh17f3"
 
 void app_main(void) {
   wifi_manager_init();
+
+  // Esperar hasta que se conecte a la red WiFi
+  ESP_LOGI("MAIN", "Esperando conexión WiFi...");
+  while (!wifi_manager_is_connected()) {
+    vTaskDelay(pdMS_TO_TICKS(500));
+  }
+  ESP_LOGI("MAIN", "WiFi conectado correctamente.");
+
+  // Inicializar MQTT solo cuando ya hay conexión WiFi
   mqtt_manager_init(MQTT_BROKER, MQTT_TOKEN);
 
   adc_continuous_handle_t adc_handle;
