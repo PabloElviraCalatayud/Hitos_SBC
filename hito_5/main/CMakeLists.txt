@@ -1,0 +1,28 @@
+idf_component_register(
+  SRCS 
+    "main.c"
+    "drivers/adc_driver.c"
+    "sensors/ldr_sensor.c"
+    "sensors/dht_sensor.c"        
+    "network/wifi_manager.c"
+    "network/mqtt_manager.c"
+    "utils/math_utils.c"
+  INCLUDE_DIRS 
+    "."
+    "drivers"
+    "sensors"
+    "network"
+    "utils"
+  REQUIRES 
+    esp_adc
+    esp_wifi
+    esp_event
+    esp_netif
+    esp_http_server
+    mqtt
+    nvs_flash
+    spiffs
+    driver                        
+    json
+)
+

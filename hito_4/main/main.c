@@ -8,8 +8,8 @@
 #include "freertos/task.h"
 #include "esp_log.h"
 
-#define MQTT_BROKER "mqtt://192.168.1.89:1885"
-#define MQTT_TOKEN  "udnencgtn1l728eh17f3"
+#define MQTT_BROKER "mqtts://192.168.1.89:1885"
+#define MQTT_TOKEN  "5oaq3wkp4wjarfsp90te"
 
 void app_main(void) {
   wifi_manager_init();

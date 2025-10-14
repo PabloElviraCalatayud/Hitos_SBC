@@ -1,0 +1,168 @@
+Command: /home/pelvira/.espressif/python_env/idf5.5_py3.13_env/bin/python /home/pelvira/esp/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /home/pelvira/Documents/Universidad/7_Septimo_Semestre/SBC/Hitos_SBC/hito_5/build/hito_5.elf /home/pelvira/Documents/Universidad/7_Septimo_Semestre/SBC/Hitos_SBC/hito_5/build/bootloader/bootloader.elf -m '/home/pelvira/.espressif/python_env/idf5.5_py3.13_env/bin/python' '/home/pelvira/esp/esp-idf/tools/idf.py'
+[0;33m--- esp-idf-monitor 1.8.0 on /dev/ttyUSB0 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0m--- 0x40080400: [0;33m_invalid_pc_placeholder[0m[0m at [0;32m/home/pelvira/esp/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m2235[0m
+[0m--- 0x40080638: [0;33mcall_start_cpu0[0m[0m at [0;32m/home/pelvira/esp/esp-idf/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x40139a60: [0;33madc_hal_get_reading_result[0m[0m at [0;32m/home/pelvira/esp/esp-idf/components/hal/adc_hal.c[0m[0m:[1;31m232[0m
+[0m--- 0x4000c46c: [0;33mmemset[0m[0m in [0;32mROM[0m
+[0m--- 0x4000c477: [0;33mmemset[0m[0m in [0;32mROM[0m
+[0m--- 0x40139a5d: [0;33madc_hal_digi_dma_link[0m[0m at [0;32m??[0m[0m:[1;31m?[0m
+[0m--- 0x40084ea4: [0;33madc_dma_intr_handler[0m[0m at [0;32m/home/pelvira/esp/esp-idf/components/esp_adc/esp32/adc_dma.c[0m[0m:[1;31m36[0m
+[0m--- 0x40083a31: [0;33m_xt_lowint1[0m[0m at [0;32m/home/pelvira/esp/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m1240[0m
+[0m--- 0x4008fc38: [0;33mspi_flash_ll_set_miso_bitlen[0m[0m at [0;32m/home/pelvira/esp/esp-idf/components/hal/esp32/include/hal/spi_flash_ll.h[0m[0m:[1;31m298[0m
+[0m--- (inlined by) [0;33mspi_flash_hal_read[0m[0m at [0;32m/home/pelvira/esp/esp-idf/components/hal/spi_flash_hal_common.inc[0m[0m:[1;31m225[0m
+[0m--- 0x40099b6a: [0;33mspi_flash_chip_generic_read[0m[0m at [0;32m/home/pelvira/esp/esp-idf/components/spi_flash/spi_flash_chip_generic.c[0m[0m:[1;31m298[0m
+[0m--- 0x40098bcf: [0;33mesp_flash_read[0m[0m at [0;32m/home/pelvira/esp/esp-idf/components/spi_flash/esp_flash_api.c[0m[0m:[1;31m932[0m
+[0m--- 0x400e41ff: [0;33mesp_partition_read[0m[0m at [0;32m/home/pelvira/esp/esp-idf/components/esp_partition/partition_target.c[0m[0m:[1;31m38[0m
+[0m--- 0x400e8e5b: [0;33mnvs::NVSPartition::read(unsigned int, void*, unsigned int)[0m[0m at [0;32m/home/pelvira/esp/esp-idf/components/nvs_flash/src/nvs_partition.cpp[0m[0m:[1;31m37[0m
+[0m--- 0x4017be6a: [0;33mnvs::Page::readEntry(unsigned int, nvs::Item&) const[0m[0m at [0;32m/home/pelvira/esp/esp-idf/components/nvs_flash/src/nvs_page.cpp[0m[0m:[1;31m858[0m
+[0m--- 0x400e7067: [0;33mnvs::Page::eraseEntryAndSpan(unsigned int)[0m[0m at [0;32m/home/pelvira/esp/esp-idf/components/nvs_flash/src/nvs_page.cpp[0m[0m:[1;31m388[0m
+[0m--- 0x400e75ff: [0;33mnvs::Page::eraseItem(unsigned char, nvs::ItemType, char const*, unsigned char, nvs::VerOffset)[0m[0m at [0;32m/home/pelvira/esp/esp-idf/components/nvs_flash/src/nvs_page.cpp[0m[0m:[1;31m364[0m
+[0m--- 0x400e8ab6: [0;33mnvs::Storage::writeItem(unsigned char, nvs::ItemType, char const*, void const*, unsigned int)[0m[0m at [0;32m/home/pelvira/esp/esp-idf/components/nvs_flash/src/nvs_storage.cpp[0m[0m:[1;31m582[0m
+[0m--- 0x400e8c26: [0;33mnvs::NVSHandleSimple::set_typed_item(nvs::ItemType, char const*, void const*, unsigned int)[0m[0m at [0;32m/home/pelvira/esp/esp-idf/components/nvs_flash/src/nvs_handle_simple.cpp[0m[0m:[1;31m21[0m
+[0m--- 0x4017bcb9: [0;33mint nvs::NVSHandle::set_item<unsigned char>(char const*, unsigned char)[0m[0m at [0;32m/home/pelvira/esp/esp-idf/components/nvs_flash/include/nvs_handle.hpp[0m[0m:[1;31m301[0m
+[0m--- 0x400e686b: [0;33mint nvs_set<unsigned char>(unsigned long, char const*, unsigned char)[0m[0m at [0;32m/home/pelvira/esp/esp-idf/components/nvs_flash/src/nvs_api.cpp[0m[0m:[1;31m368[0m
+[0m--- 0x400e6884: [0;33mnvs_set_u8[0m[0m at [0;32m/home/pelvira/esp/esp-idf/components/nvs_flash/src/nvs_api.cpp[0m[0m:[1;31m378[0m
+[0m--- 0x4011e0b9: [0;33mwifi_nvs_set[0m[0m at [0;32m??[0m[0m:[1;31m?[0m
+[0m--- 0x40128f81: [0;33msta_update_power_off_reset_flag[0m[0m at [0;32m??[0m[0m:[1;31m?[0m
+[0m--- 0x401290ed: [0;33mieee80211_sta_new_state[0m[0m at [0;32m??[0m[0m:[1;31m?[0m
+[0m--- 0x40120502: [0;33mieee80211_sta_disconnect[0m[0m at [0;32m??[0m[0m:[1;31m?[0m
+[0m--- 0x401205d7: [0;33mieee80211_sta_disconnect[0m[0m at [0;32m??[0m[0m:[1;31m?[0m
+[0m--- 0x40121d63: [0;33mwifi_disconnect_process[0m[0m at [0;32m??[0m[0m:[1;31m?[0m
+[0m--- 0x40128d19: [0;33mwifi_station_stop[0m[0m at [0;32m??[0m[0m:[1;31m?[0m
+[0m--- 0x4011fb4a: [0;33m_do_wifi_stop[0m[0m at [0;32m??[0m[0m:[1;31m?[0m
+[0m--- 0x40121bad: [0;33mwifi_stop_process[0m[0m at [0;32m??[0m[0m:[1;31m?[0m
+[0m--- 0x4011fa6e: [0;33mieee80211_ioctl_process[0m[0m at [0;32m??[0m[0m:[1;31m?[0m
+[0m--- 0x40094805: [0;33mppTask[0m[0m at [0;32m??[0m[0m:[1;31m?[0m
+[0m--- 0x4008bfb9: [0;33mvPortTaskWrapper[0m[0m at [0;32m/home/pelvira/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m139[0m
+[0m--- 0x40080400: [0;33m_invalid_pc_placeholder[0m[0m at [0;32m/home/pelvira/esp/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m2235[0m
+[0m--- 0x40080638: [0;33mcall_start_cpu0[0m[0m at [0;32m/home/pelvira/esp/esp-idf/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x40139a60: [0;33madc_hal_get_reading_result[0m[0m at [0;32m/home/pelvira/esp/esp-idf/components/hal/adc_hal.c[0m[0m:[1;31m232[0m
+[0m--- 0x4000c2e0: [0;33mmemcpy[0m[0m in [0;32mROM[0m
+[0m--- 0x4000c2f6: [0;33mmemcpy[0m[0m in [0;32mROM[0m
+[0m--- 0x40139a5d: [0;33madc_hal_digi_dma_link[0m[0m at [0;32m??[0m[0m:[1;31m?[0m
+[0m--- 0x40084ea4: [0;33madc_dma_intr_handler[0m[0m at [0;32m/home/pelvira/esp/esp-idf/components/esp_adc/esp32/adc_dma.c[0m[0m:[1;31m36[0m
+[0m--- 0x40083a31: [0;33m_xt_lowint1[0m[0m at [0;32m/home/pelvira/esp/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m1240[0m
+[0m--- 0x400824c9: [0;33mheap_caps_calloc_base[0m[0m at [0;32m/home/pelvira/esp/esp-idf/components/heap/heap_caps_base.c[0m[0m:[1;31m329[0m
+[0m--- 0x4008a14d: [0;33mesp_cache_suspend_ext_mem_cache[0m[0m at [0;32m/home/pelvira/esp/esp-idf/components/esp_mm/esp_cache_utils.c[0m[0m:[1;31m36[0m
+[0m--- 0x400846af: [0;33mspi_flash_disable_cache[0m[0m at [0;32m/home/pelvira/esp/esp-idf/components/spi_flash/cache_utils.c[0m[0m:[1;31m346[0m
+[0m--- 0x40084794: [0;33mspi_flash_disable_interrupts_caches_and_other_cpu[0m[0m at [0;32m/home/pelvira/esp/esp-idf/components/spi_flash/cache_utils.c[0m[0m:[1;31m191[0m
+[0m--- 0x40084a7f: [0;33mcache_disable[0m[0m at [0;32m/home/pelvira/esp/esp-idf/components/spi_flash/spi_flash_os_func_app.c[0m[0m:[1;31m71[0m
+[0m--- 0x40084a89: [0;33mspi1_start[0m[0m at [0;32m/home/pelvira/esp/esp-idf/components/spi_flash/spi_flash_os_func_app.c[0m[0m:[1;31m123[0m
+[0m--- 0x40099143: [0;33mspiflash_start_default[0m[0m at [0;32m/home/pelvira/esp/esp-idf/components/spi_flash/esp_flash_api.c[0m[0m:[1;31m191[0m
+[0m--- 0x40098bad: [0;33mesp_flash_read[0m[0m at [0;32m/home/pelvira/esp/esp-idf/components/spi_flash/esp_flash_api.c[0m[0m:[1;31m921[0m
+[0m--- 0x400e41ff: [0;33mesp_partition_read[0m[0m at [0;32m/home/pelvira/esp/esp-idf/components/esp_partition/partition_target.c[0m[0m:[1;31m38[0m
+[0m--- 0x400e8e5b: [0;33mnvs::NVSPartition::read(unsigned int, void*, unsigned int)[0m[0m at [0;32m/home/pelvira/esp/esp-idf/components/nvs_flash/src/nvs_partition.cpp[0m[0m:[1;31m37[0m
+[0m--- 0x4017be6a: [0;33mnvs::Page::readEntry(unsigned int, nvs::Item&) const[0m[0m at [0;32m/home/pelvira/esp/esp-idf/components/nvs_flash/src/nvs_page.cpp[0m[0m:[1;31m858[0m
+[0m--- 0x400e7462: [0;33mnvs::Page::cmpItem(unsigned char, nvs::ItemType, char const*, void const*, unsigned int, unsigned char, nvs::VerOffset)[0m[0m at [0;32m/home/pelvira/esp/esp-idf/components/nvs_flash/src/nvs_page.cpp[0m[0m:[1;31m337[0m
+[0m--- 0x400e7e63: [0;33mnvs::Storage::cmpMultiPageBlob(unsigned char, char const*, void const*, unsigned int)[0m[0m at [0;32m/home/pelvira/esp/esp-idf/components/nvs_flash/src/nvs_storage.cpp[0m[0m:[1;31m726[0m
+[0m--- 0x400e8979: [0;33mnvs::Storage::writeItem(unsigned char, nvs::ItemType, char const*, void const*, unsigned int)[0m[0m at [0;32m/home/pelvira/esp/esp-idf/components/nvs_flash/src/nvs_storage.cpp[0m[0m:[1;31m475[0m
+[0m--- 0x400e8c5d: [0;33mnvs::NVSHandleSimple::set_blob(char const*, void const*, unsigned int)[0m[0m at [0;32m/home/pelvira/esp/esp-idf/components/nvs_flash/src/nvs_handle_simple.cpp[0m[0m:[1;31m44[0m
+[0m--- 0x400e6713: [0;33mnvs_set_blob[0m[0m at [0;32m/home/pelvira/esp/esp-idf/components/nvs_flash/src/nvs_api.cpp[0m[0m:[1;31m444[0m
+[0m--- 0x4011e129: [0;33mwifi_nvs_set[0m[0m at [0;32m??[0m[0m:[1;31m?[0m
+[0m--- 0x4011fe97: [0;33mwifi_station_save_ap_channel[0m[0m at [0;32m??[0m[0m:[1;31m?[0m
+[0m--- 0x40128326: [0;33mcnx_auth_done[0m[0m at [0;32m??[0m[0m:[1;31m?[0m
+[0m--- 0x4011f046: [0;33mesp_wifi_auth_done_internal[0m[0m at [0;32m??[0m[0m:[1;31m?[0m
+[0m--- 0x40153a53: [0;33mwpa_neg_complete[0m[0m at [0;32m/home/pelvira/esp/esp-idf/components/wpa_supplicant/esp_supplicant/src/esp_wpa_main.c[0m[0m:[1;31m132[0m
+[0m--- 0x4015dbb9: [0;33mwpa_supplicant_key_neg_complete[0m[0m at [0;32m/home/pelvira/esp/esp-idf/components/wpa_supplicant/src/rsn_supp/wpa.c[0m[0m:[1;31m840[0m
+[0m--- 0x4015e8a5: [0;33mwpa_supplicant_send_4_of_4_txcallback[0m[0m at [0;32m/home/pelvira/esp/esp-idf/components/wpa_supplicant/src/rsn_supp/wpa.c[0m[0m:[1;31m1416[0m
+[0m--- 0x4015ea1f: [0;33meapol_txcb[0m[0m at [0;32m/home/pelvira/esp/esp-idf/components/wpa_supplicant/src/rsn_supp/wpa.c[0m[0m:[1;31m2680[0m
+[0m--- 0x401287a9: [0;33msta_eapol_txdone_cb[0m[0m at [0;32m??[0m[0m:[1;31m?[0m
+[0m--- 0x40093695: [0;33mppProcTxCallback[0m[0m at [0;32m??[0m[0m:[1;31m?[0m
+[0m--- 0x40094ad9: [0;33mlmacTxDone[0m[0m at [0;32m??[0m[0m:[1;31m?[0m
+[0m--- 0x40094dba: [0;33mlmacRecycleMPDU[0m[0m at [0;32m??[0m[0m:[1;31m?[0m
+[0m--- 0x40094fc6: [0;33mlmacEndFrameExchangeSequence[0m[0m at [0;32m??[0m[0m:[1;31m?[0m
+[0m--- 0x40180eb1: [0;33mlmacProcessTxSuccess[0m[0m at [0;32m??[0m[0m:[1;31m?[0m
+[0m--- 0x40180fcd: [0;33mlmacProcessTxComplete[0m[0m at [0;32m??[0m[0m:[1;31m?[0m
+[0m--- 0x40094894: [0;33mppTask[0m[0m at [0;32m??[0m[0m:[1;31m?[0m
+[0m--- 0x4008bfb9: [0;33mvPortTaskWrapper[0m[0m at [0;32m/home/pelvira/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m139[0m
+[0m--- 0x40080400: [0;33m_invalid_pc_placeholder[0m[0m at [0;32m/home/pelvira/esp/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m2235[0m
+[0m--- 0x40080638: [0;33mcall_start_cpu0[0m[0m at [0;32m/home/pelvira/esp/esp-idf/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x40139a60: [0;33madc_hal_get_reading_result[0m[0m at [0;32m/home/pelvira/esp/esp-idf/components/hal/adc_hal.c[0m[0m:[1;31m232[0m
+[0m--- 0x4000c46c: [0;33mmemset[0m[0m in [0;32mROM[0m
+[0m--- 0x4000c477: [0;33mmemset[0m[0m in [0;32mROM[0m
+[0m--- 0x40139a5d: [0;33madc_hal_digi_dma_link[0m[0m at [0;32m??[0m[0m:[1;31m?[0m
+[0m--- 0x40084ea4: [0;33madc_dma_intr_handler[0m[0m at [0;32m/home/pelvira/esp/esp-idf/components/esp_adc/esp32/adc_dma.c[0m[0m:[1;31m36[0m
+[0m--- 0x40083a31: [0;33m_xt_lowint1[0m[0m at [0;32m/home/pelvira/esp/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m1240[0m
+[0m--- 0x4008fe8c: [0;33mspi_flash_hal_poll_cmd_done[0m[0m at [0;32m/home/pelvira/esp/esp-idf/components/hal/spi_flash_hal_common.inc[0m[0m:[1;31m39[0m
+[0m--- 0x4008fc85: [0;33mspi_flash_hal_read[0m[0m at [0;32m/home/pelvira/esp/esp-idf/components/hal/spi_flash_hal_common.inc[0m[0m:[1;31m227[0m
+[0m--- 0x40099b6a: [0;33mspi_flash_chip_generic_read[0m[0m at [0;32m/home/pelvira/esp/esp-idf/components/spi_flash/spi_flash_chip_generic.c[0m[0m:[1;31m298[0m
+[0m--- 0x40098bcf: [0;33mesp_flash_read[0m[0m at [0;32m/home/pelvira/esp/esp-idf/components/spi_flash/esp_flash_api.c[0m[0m:[1;31m932[0m
+[0m--- 0x400e41ff: [0;33mesp_partition_read[0m[0m at [0;32m/home/pelvira/esp/esp-idf/components/esp_partition/partition_target.c[0m[0m:[1;31m38[0m
+[0m--- 0x400e8e5b: [0;33mnvs::NVSPartition::read(unsigned int, void*, unsigned int)[0m[0m at [0;32m/home/pelvira/esp/esp-idf/components/nvs_flash/src/nvs_partition.cpp[0m[0m:[1;31m37[0m
+[0m--- 0x4017be6a: [0;33mnvs::Page::readEntry(unsigned int, nvs::Item&) const[0m[0m at [0;32m/home/pelvira/esp/esp-idf/components/nvs_flash/src/nvs_page.cpp[0m[0m:[1;31m858[0m
+[0m--- 0x400e7245: [0;33mnvs::Page::findItem(unsigned char, nvs::ItemType, char const*, unsigned int&, nvs::Item&, unsigned char, nvs::VerOffset)[0m[0m at [0;32m/home/pelvira/esp/esp-idf/components/nvs_flash/src/nvs_page.cpp[0m[0m:[1;31m911[0m
+[0m--- 0x400e7db5: [0;33mnvs::Storage::findItem(unsigned char, nvs::ItemType, char const*, nvs::Page*&, nvs::Item&, unsigned char, nvs::VerOffset)[0m[0m at [0;32m/home/pelvira/esp/esp-idf/components/nvs_flash/src/nvs_storage.cpp[0m[0m:[1;31m261[0m
+[0m--- 0x400e7e37: [0;33mnvs::Storage::cmpMultiPageBlob(unsigned char, char const*, void const*, unsigned int)[0m[0m at [0;32m/home/pelvira/esp/esp-idf/components/nvs_flash/src/nvs_storage.cpp[0m[0m:[1;31m719[0m
+[0m--- 0x400e8979: [0;33mnvs::Storage::writeItem(unsigned char, nvs::ItemType, char const*, void const*, unsigned int)[0m[0m at [0;32m/home/pelvira/esp/esp-idf/components/nvs_flash/src/nvs_storage.cpp[0m[0m:[1;31m475[0m
+[0m--- 0x400e8c5d: [0;33mnvs::NVSHandleSimple::set_blob(char const*, void const*, unsigned int)[0m[0m at [0;32m/home/pelvira/esp/esp-idf/components/nvs_flash/src/nvs_handle_simple.cpp[0m[0m:[1;31m44[0m
+[0m--- 0x400e6713: [0;33mnvs_set_blob[0m[0m at [0;32m/home/pelvira/esp/esp-idf/components/nvs_flash/src/nvs_api.cpp[0m[0m:[1;31m444[0m
+[0m--- 0x4011e129: [0;33mwifi_nvs_set[0m[0m at [0;32m??[0m[0m:[1;31m?[0m
+[0m--- 0x4011fe97: [0;33mwifi_station_save_ap_channel[0m[0m at [0;32m??[0m[0m:[1;31m?[0m
+[0m--- 0x40128326: [0;33mcnx_auth_done[0m[0m at [0;32m??[0m[0m:[1;31m?[0m
+[0m--- 0x4011f046: [0;33mesp_wifi_auth_done_internal[0m[0m at [0;32m??[0m[0m:[1;31m?[0m
+[0m--- 0x40153a53: [0;33mwpa_neg_complete[0m[0m at [0;32m/home/pelvira/esp/esp-idf/components/wpa_supplicant/esp_supplicant/src/esp_wpa_main.c[0m[0m:[1;31m132[0m
+[0m--- 0x4015dbb9: [0;33mwpa_supplicant_key_neg_complete[0m[0m at [0;32m/home/pelvira/esp/esp-idf/components/wpa_supplicant/src/rsn_supp/wpa.c[0m[0m:[1;31m840[0m
+[0m--- 0x4015e8a5: [0;33mwpa_supplicant_send_4_of_4_txcallback[0m[0m at [0;32m/home/pelvira/esp/esp-idf/components/wpa_supplicant/src/rsn_supp/wpa.c[0m[0m:[1;31m1416[0m
+[0m--- 0x4015ea1f: [0;33meapol_txcb[0m[0m at [0;32m/home/pelvira/esp/esp-idf/components/wpa_supplicant/src/rsn_supp/wpa.c[0m[0m:[1;31m2680[0m
+[0m--- 0x401287a9: [0;33msta_eapol_txdone_cb[0m[0m at [0;32m??[0m[0m:[1;31m?[0m
+[0m--- 0x40093695: [0;33mppProcTxCallback[0m[0m at [0;32m??[0m[0m:[1;31m?[0m
+[0m--- 0x40094ad9: [0;33mlmacTxDone[0m[0m at [0;32m??[0m[0m:[1;31m?[0m
+[0m--- 0x40094dba: [0;33mlmacRecycleMPDU[0m[0m at [0;32m??[0m[0m:[1;31m?[0m
+[0m--- 0x40094fc6: [0;33mlmacEndFrameExchangeSequence[0m[0m at [0;32m??[0m[0m:[1;31m?[0m
+[0m--- 0x40180eb1: [0;33mlmacProcessTxSuccess[0m[0m at [0;32m??[0m[0m:[1;31m?[0m
+[0m--- 0x40180fcd: [0;33mlmacProcessTxComplete[0m[0m at [0;32m??[0m[0m:[1;31m?[0m
+[0m--- 0x40094894: [0;33mppTask[0m[0m at [0;32m??[0m[0m:[1;31m?[0m
+[0m--- 0x4008bfb9: [0;33mvPortTaskWrapper[0m[0m at [0;32m/home/pelvira/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m139[0m
+[0m--- 0x40080400: [0;33m_invalid_pc_placeholder[0m[0m at [0;32m/home/pelvira/esp/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m2235[0m
+[0m--- 0x40080638: [0;33mcall_start_cpu0[0m[0m at [0;32m/home/pelvira/esp/esp-idf/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x40139a60: [0;33madc_hal_get_reading_result[0m[0m at [0;32m/home/pelvira/esp/esp-idf/components/hal/adc_hal.c[0m[0m:[1;31m232[0m
+[0m--- 0x4000c2e0: [0;33mmemcpy[0m[0m in [0;32mROM[0m
+[0m--- 0x4000c2f6: [0;33mmemcpy[0m[0m in [0;32mROM[0m
+[0m--- 0x40139a5d: [0;33madc_hal_digi_dma_link[0m[0m at [0;32m??[0m[0m:[1;31m?[0m
+[0m--- 0x40084ea4: [0;33madc_dma_intr_handler[0m[0m at [0;32m/home/pelvira/esp/esp-idf/components/esp_adc/esp32/adc_dma.c[0m[0m:[1;31m36[0m
+[0m--- 0x40083a31: [0;33m_xt_lowint1[0m[0m at [0;32m/home/pelvira/esp/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m1240[0m
+[0m--- 0x4008efe7: [0;33mcache_hal_suspend[0m[0m at [0;32m/home/pelvira/esp/esp-idf/components/hal/esp32/cache_hal_esp32.c[0m[0m:[1;31m24[0m
+[0m--- 0x4008a14d: [0;33mesp_cache_suspend_ext_mem_cache[0m[0m at [0;32m/home/pelvira/esp/esp-idf/components/esp_mm/esp_cache_utils.c[0m[0m:[1;31m36[0m
+[0m--- 0x400846af: [0;33mspi_flash_disable_cache[0m[0m at [0;32m/home/pelvira/esp/esp-idf/components/spi_flash/cache_utils.c[0m[0m:[1;31m346[0m
+[0m--- 0x40084794: [0;33mspi_flash_disable_interrupts_caches_and_other_cpu[0m[0m at [0;32m/home/pelvira/esp/esp-idf/components/spi_flash/cache_utils.c[0m[0m:[1;31m191[0m
+[0m--- 0x40084a7f: [0;33mcache_disable[0m[0m at [0;32m/home/pelvira/esp/esp-idf/components/spi_flash/spi_flash_os_func_app.c[0m[0m:[1;31m71[0m
+[0m--- 0x40084a89: [0;33mspi1_start[0m[0m at [0;32m/home/pelvira/esp/esp-idf/components/spi_flash/spi_flash_os_func_app.c[0m[0m:[1;31m123[0m
+[0m--- 0x40099143: [0;33mspiflash_start_default[0m[0m at [0;32m/home/pelvira/esp/esp-idf/components/spi_flash/esp_flash_api.c[0m[0m:[1;31m191[0m
+[0m--- 0x40098d7b: [0;33mesp_flash_write[0m[0m at [0;32m/home/pelvira/esp/esp-idf/components/spi_flash/esp_flash_api.c[0m[0m:[1;31m1105[0m
+[0m--- 0x400e4019: [0;33mesp_partition_write[0m[0m at [0;32m/home/pelvira/esp/esp-idf/components/esp_partition/partition_target.c[0m[0m:[1;31m78[0m
+[0m--- 0x400e8e97: [0;33mnvs::NVSPartition::write(unsigned int, void const*, unsigned int)[0m[0m at [0;32m/home/pelvira/esp/esp-idf/components/nvs_flash/src/nvs_partition.cpp[0m[0m:[1;31m51[0m
+[0m--- 0x400e6c76: [0;33mnvs::Page::writeEntry(nvs::Item const&)[0m[0m at [0;32m/home/pelvira/esp/esp-idf/components/nvs_flash/src/nvs_page.cpp[0m[0m:[1;31m106[0m
+[0m--- 0x400e6f69: [0;33mnvs::Page::writeItem(unsigned char, nvs::ItemType, char const*, void const*, unsigned int, unsigned char)[0m[0m at [0;32m/home/pelvira/esp/esp-idf/components/nvs_flash/src/nvs_page.cpp[0m[0m:[1;31m215[0m
+[0m--- 0x400e89fc: [0;33mnvs::Storage::writeItem(unsigned char, nvs::ItemType, char const*, void const*, unsigned int)[0m[0m at [0;32m/home/pelvira/esp/esp-idf/components/nvs_flash/src/nvs_storage.cpp[0m[0m:[1;31m507[0m
+[0m--- 0x400e8c26: [0;33mnvs::NVSHandleSimple::set_typed_item(nvs::ItemType, char const*, void const*, unsigned int)[0m[0m at [0;32m/home/pelvira/esp/esp-idf/components/nvs_flash/src/nvs_handle_simple.cpp[0m[0m:[1;31m21[0m
+[0m--- 0x4017bcb9: [0;33mint nvs::NVSHandle::set_item<unsigned char>(char const*, unsigned char)[0m[0m at [0;32m/home/pelvira/esp/esp-idf/components/nvs_flash/include/nvs_handle.hpp[0m[0m:[1;31m301[0m
+[0m--- 0x400e686b: [0;33mint nvs_set<unsigned char>(unsigned long, char const*, unsigned char)[0m[0m at [0;32m/home/pelvira/esp/esp-idf/components/nvs_flash/src/nvs_api.cpp[0m[0m:[1;31m368[0m
+[0m--- 0x400e6884: [0;33mnvs_set_u8[0m[0m at [0;32m/home/pelvira/esp/esp-idf/components/nvs_flash/src/nvs_api.cpp[0m[0m:[1;31m378[0m
+[0m--- 0x4011e0b9: [0;33mwifi_nvs_set[0m[0m at [0;32m??[0m[0m:[1;31m?[0m
+[0m--- 0x40128f81: [0;33msta_update_power_off_reset_flag[0m[0m at [0;32m??[0m[0m:[1;31m?[0m
+[0m--- 0x401290ed: [0;33mieee80211_sta_new_state[0m[0m at [0;32m??[0m[0m:[1;31m?[0m
+[0m--- 0x4012b649: [0;33mieee80211_mlme_connect_bss[0m[0m at [0;32m??[0m[0m:[1;31m?[0m
+[0m--- 0x40124d5e: [0;33mcnx_csa_fn[0m[0m at [0;32m??[0m[0m:[1;31m?[0m
+[0m--- 0x40125157: [0;33mcnx_csa_fn[0m[0m at [0;32m??[0m[0m:[1;31m?[0m
+[0m--- 0x40125ee5: [0;33mcnx_do_handoff_internal[0m[0m at [0;32m??[0m[0m:[1;31m?[0m
+[0m--- 0x4011e9b9: [0;33mwifi_sta_connect_internal_process[0m[0m at [0;32m??[0m[0m:[1;31m?[0m
+[0m--- 0x40122120: [0;33mwifi_ipc_process[0m[0m at [0;32m??[0m[0m:[1;31m?[0m
+[0m--- 0x4011fa6e: [0;33mieee80211_ioctl_process[0m[0m at [0;32m??[0m[0m:[1;31m?[0m
+[0m--- 0x40122d75: [0;33mieee80211_ioctl[0m[0m at [0;32m??[0m[0m:[1;31m?[0m
+[0m--- 0x401246cd: [0;33mesp_wifi_ipc_internal[0m[0m at [0;32m??[0m[0m:[1;31m?[0m
+[0m--- 0x4011f9a1: [0;33mesp_wifi_sta_connect_internal[0m[0m at [0;32m??[0m[0m:[1;31m?[0m
+[0m--- 0x40153a1b: [0;33mwpa_sta_connect[0m[0m at [0;32m/home/pelvira/esp/esp-idf/components/wpa_supplicant/esp_supplicant/src/esp_wpa_main.c[0m[0m:[1;31m263[0m
+[0m--- 0x401262a1: [0;33mcnx_remove_rc[0m[0m at [0;32m??[0m[0m:[1;31m?[0m
+[0m--- 0x401264d9: [0;33mcnx_start_handoff_cb[0m[0m at [0;32m??[0m[0m:[1;31m?[0m
+[0m--- 0x4012f1d9: [0;33mclear_bss_queue[0m[0m at [0;32m??[0m[0m:[1;31m?[0m
+[0m--- 0x4012f6f7: [0;33mscan_inter_channel_timeout_process[0m[0m at [0;32m??[0m[0m:[1;31m?[0m
+[0m--- 0x40118601: [0;33mchm_end_op[0m[0m at [0;32m??[0m[0m:[1;31m?[0m
+[0m--- 0x40118625: [0;33mchm_end_op_timeout_process[0m[0m at [0;32m??[0m[0m:[1;31m?[0m
+[0m--- 0x4012309f: [0;33mieee80211_ap_sa_query_timeout[0m[0m at [0;32m??[0m[0m:[1;31m?[0m
+[0m--- 0x40123347: [0;33mieee80211_timer_do_process[0m[0m at [0;32m??[0m[0m:[1;31m?[0m
+[0m--- 0x40094805: [0;33mppTask[0m[0m at [0;32m??[0m[0m:[1;31m?[0m
+[0m--- 0x4008bfb9: [0;33mvPortTaskWrapper[0m[0m at [0;32m/home/pelvira/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m139[0m
+[0m--- 0x40080400: [0;33m_invalid_pc_placeholder[0m[0m at [0;32m/home/pelvira/esp/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m2235[0m
+[0m--- 0x40080638: [0;33mcall_start_cpu0[0m[0m at [0;32m/home/pelvira/esp/esp-idf/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m
