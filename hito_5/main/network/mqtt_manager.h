@@ -28,7 +28,8 @@ void mqtt_manager_publish_light(uint8_t light_level);
  * Publica en topic "v1/devices/me/telemetry" un JSON {"temperature":..., "humidity": ...}
  */
 void mqtt_manager_publish_env(float temperature, float humidity);
-
+//Permite mandar un payload json
+void mqtt_manager_publish_json(const char *json_payload);
 /**
  * Registra callback para RPCs recibidos por MQTT (topic v1/devices/me/rpc/request/+)
  */

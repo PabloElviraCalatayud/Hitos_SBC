@@ -1,0 +1,887 @@
+Command: /home/pelvira/.espressif/python_env/idf5.5_py3.13_env/bin/python /home/pelvira/esp/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /home/pelvira/Documents/Universidad/7_Septimo_Semestre/SBC/Hitos_SBC/hito_5/build/hito_5.elf /home/pelvira/Documents/Universidad/7_Septimo_Semestre/SBC/Hitos_SBC/hito_5/build/bootloader/bootloader.elf -m '/home/pelvira/.espressif/python_env/idf5.5_py3.13_env/bin/python' '/home/pelvira/esp/esp-idf/tools/idf.py'
+ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5.1-dirty 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Oct 15 2025 12:27:24[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v1.0[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot:  3 spiffs           Unknown data     01 82 00110000 00100000[0m
+[0;32mI (84) boot: End of partition table[0m
+[0;32mI (87) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=23f64h (147300) map[0m
+[0;32mI (145) esp_image: segment 1: paddr=00033f8c vaddr=3ffb0000 size=03f9ch ( 16284) load[0m
+[0;32mI (151) esp_image: segment 2: paddr=00037f30 vaddr=40080000 size=080e8h ( 33000) load[0m
+[0;32mI (164) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=b9114h (758036) map[0m
+[0;32mI (423) esp_image: segment 4: paddr=000f913c vaddr=400880e8 size=12f38h ( 77624) load[0m
+[0;32mI (454) esp_image: segment 5: paddr=0010c07c vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (467) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (467) boot: Disabling RNG early entropy source...[0m
+[0;32mI (478) cpu_start: Multicore app[0m
+[0;32mI (486) cpu_start: Pro cpu start user code[0m
+[0;32mI (486) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (486) app_init: Application information:[0m
+[0;32mI (486) app_init: Project name:     hito_5[0m
+[0;32mI (490) app_init: App version:      a985be1-dirty[0m
+[0;32mI (495) app_init: Compile time:     Oct 15 2025 12:27:14[0m
+[0;32mI (500) app_init: ELF file SHA256:  198a02374...[0m
+[0;32mI (504) app_init: ESP-IDF:          v5.5.1-dirty[0m
+[0;32mI (508) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (512) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (516) efuse_init: Chip rev:         v1.0[0m
+[0;32mI (520) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (526) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (531) heap_init: At 3FFB86C0 len 00027940 (158 KiB): DRAM[0m
+[0;32mI (537) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (542) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (547) heap_init: At 4009B020 len 00004FE0 (19 KiB): IRAM[0m
+[0;33mW (554) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;32mI (566) spi_flash: detected chip: generic[0m
+[0;32mI (569) spi_flash: flash io: dio[0m
+[0;33mW (572) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (583) main_task: Started on CPU0[0m
+[0;32mI (593) main_task: Calling app_main()[0m
+[0;32mI (693) wifi_manager: Credenciales cargadas: SSID='SBC'[0m
+[0;32mI (713) wifi:wifi driver task: 3ffc1354, prio:23, stack:6656, core=0[0m
+[0;32mI (733) wifi:wifi firmware version: 14da9b7[0m
+[0;32mI (733) wifi:wifi certification version: v7.0[0m
+[0;32mI (733) wifi:config NVS flash: enabled[0m
+[0;32mI (733) wifi:config nano formatting: disabled[0m
+[0;32mI (733) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (743) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (743) wifi:Init management short buffer num: 32[0m
+[0;32mI (743) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (753) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (753) wifi:Init static rx buffer num: 10[0m
+[0;32mI (763) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (763) wifi_init: rx ba win: 6[0m
+[0;32mI (763) wifi_init: accept mbox: 6[0m
+[0;32mI (773) wifi_init: tcpip mbox: 32[0m
+[0;32mI (773) wifi_init: udp mbox: 6[0m
+[0;32mI (773) wifi_init: tcp mbox: 6[0m
+[0;32mI (773) wifi_init: tcp tx win: 5760[0m
+[0;32mI (783) wifi_init: tcp rx win: 5760[0m
+[0;32mI (783) wifi_init: tcp mss: 1440[0m
+[0;32mI (783) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (793) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (803) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (803) phy_init: phy_version 4861,b71b5ad,Aug  5 2025,11:16:06[0m
+[0;32mI (883) wifi:mode : sta (24:62:ab:f2:1c:70) + softAP (24:62:ab:f2:1c:71)[0m
+[0;32mI (883) wifi:enable tsf[0m
+[0;32mI (883) wifi:Total power save buffer number: 16[0m
+[0;32mI (893) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (893) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (903) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+[0;32mI (913) wifi:ap channel adjust o:1,1 n:6,2[0m
+[0;32mI (913) wifi:new:<6,0>, old:<1,1>, ap:<6,2>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (913) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (923) wifi_manager: Servidor web iniciado[0m
+[0;32mI (923) wifi_manager: AP iniciado con SSID: ESP32_F21C71[0m
+[0;32mI (923) MAIN: Esperando conexión WiFi...[0m
+[0;32mI (933) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (943) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (963) wifi:<ba-add>idx:0 (ifx:0, 70:4d:7b:8c:a3:b8), tid:0, ssn:0, winSize:64[0m
+[0;32mI (983) wifi:connected with SBC, aid = 8, channel 6, BW20, bssid = 70:4d:7b:8c:a3:b8[0m
+[0;32mI (983) wifi:security: WPA2-PSK, phy: bgn, rssi: -56[0m
+[0;32mI (983) wifi:pm start, type: 1[0m
+
+[0;32mI (983) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (1053) wifi:AP's beacon interval = 102400 us, DTIM period = 3[0m
+[0;32mI (3503) esp_netif_handlers: sta ip: 192.168.1.216, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (3503) wifi_manager: Conectado. IP local: 192.168.1.216[0m
+[0;32mI (3933) MAIN: WiFi conectado.[0m
+[0;32mI (5933) MQTT_MANAGER: Iniciando MQTT con broker: mqtt://192.168.1.89:1885[0m
+[0;32mI (5933) LDR_SENSOR: LDR inicializado (canal ADC0)[0m
+[0;32mI (5943) BME680: BME680 detectado correctamente (ID 0x61)[0m
+[0;32mI (5953) MAIN: BME680 inicializado correctamente[0m
+[0;32mI (7093) MQTT_MANAGER: MQTT conectado[0m
+[0;32mI (7103) MQTT_MANAGER: Publicado nivel de luz: 56%[0m
+[0;32mI (7103) MAIN: LDR: 7620.48 Ω, Luz: 56%[0m
+[0;32mI (7103) BME680: Temp: 5242.88 °C | Hum: 32.00 % | Pres: 5242.88 hPa | Gas: 0.00 Ω[0m
+[0;32mI (7113) MQTT_MANAGER: Publicado JSON: {"temperature":5242.88,"humidity":32.00,"pressure":5242.88,"gas":0.00,"light":56}[0m
+[0;32mI (7123) MAIN: Datos enviados a ThingsBoard: {"temperature":5242.88,"humidity":32.00,"pressure":5242.88,"gas":0.00,"light":56}[0m
+[0;32mI (7133) MAIN: Preparando para entrar en light sleep 2000 ms...[0m
+[0;32mI (7133) MAIN: ADC detenido antes de dormir[0m
+[0;32mI (7153) MQTT_MANAGER: Cliente MQTT detenido correctamente[0m
+[0;32mI (7153) MAIN: MQTT desconectado[0m
+[0;32mI (7153) wifi:state: run -> init (0x0)[0m
+[0;32mI (7163) wifi:pm stop, total sleep time: 4638159 us / 6174158 us[0m
+
+[0;32mI (7163) wifi:<ba-del>idx:0, tid:0[0m
+[0;32mI (7163) wifi:new:<6,0>, old:<6,0>, ap:<6,2>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;33mW (7373) wifi_manager: Reintentando conexión (1/5)[0m
+[0;32mI (7633) wifi:flush txq[0m
+[0;32mI (7633) wifi:stop sw txq[0m
+[0;32mI (7633) wifi:lmac stop hw txq[0m
+I (7733) MAIN: WiFi detenido, entrando en light sleep...
+[0;32mI (7733) MAIN: Despertando de light sleep[0m
+[0;32mI (7733) wifi:mode : sta (24:62:ab:f2:1c:70) + softAP (24:62:ab:f2:1c:71)[0m
+[0;32mI (7733) wifi:enable tsf[0m
+[0;32mI (7733) wifi:Total power save buffer number: 16[0m
+[0;32mI (7743) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (7743) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (7753) MAIN: Esperando reconexión WiFi...[0m
+[0;32mI (7753) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+[0;32mI (7763) wifi:ap channel adjust o:1,1 n:6,2[0m
+[0;32mI (7763) wifi:new:<6,0>, old:<1,1>, ap:<6,2>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (7773) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (7783) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (7793) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (7803) wifi:<ba-add>idx:0 (ifx:0, 70:4d:7b:8c:a3:b8), tid:0, ssn:0, winSize:64[0m
+[0;32mI (7823) wifi:connected with SBC, aid = 8, channel 6, BW20, bssid = 70:4d:7b:8c:a3:b8[0m
+[0;32mI (7833) wifi:security: WPA2-PSK, phy: bgn, rssi: -52[0m
+[0;32mI (7833) wifi:pm start, type: 1[0m
+
+[0;32mI (7863) wifi:AP's beacon interval = 102400 us, DTIM period = 3[0m
+[0;32mI (10343) esp_netif_handlers: sta ip: 192.168.1.216, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (10343) wifi_manager: Conectado. IP local: 192.168.1.216[0m
+[0;32mI (10753) MAIN: WiFi reconectado tras light sleep[0m
+[0;32mI (10753) MAIN: ADC reiniciado tras light sleep[0m
+[0;32mI (10753) MQTT_MANAGER: Cliente MQTT reiniciado correctamente[0m
+[0;32mI (10753) MAIN: MQTT reconectado tras light sleep[0m
+[0;32mI (11863) MQTT_MANAGER: MQTT conectado[0m
+[0;32mI (11873) MQTT_MANAGER: Publicado nivel de luz: 56%[0m
+[0;32mI (11873) MAIN: LDR: 7620.48 Ω, Luz: 56%[0m
+[0;32mI (11873) BME680: Temp: 5242.88 °C | Hum: 32.00 % | Pres: 5242.88 hPa | Gas: 0.00 Ω[0m
+[0;32mI (11883) MQTT_MANAGER: Publicado JSON: {"temperature":5242.88,"humidity":32.00,"pressure":5242.88,"gas":0.00,"light":56}[0m
+[0;32mI (11893) MAIN: Datos enviados a ThingsBoard: {"temperature":5242.88,"humidity":32.00,"pressure":5242.88,"gas":0.00,"light":56}[0m
+[0;32mI (11903) MAIN: Preparando para entrar en light sleep 2000 ms...[0m
+[0;32mI (11903) MAIN: ADC detenido antes de dormir[0m
+[0;32mI (12483) MQTT_MANAGER: Cliente MQTT detenido correctamente[0m
+[0;32mI (12483) MAIN: MQTT desconectado[0m
+[0;32mI (12483) wifi:state: run -> init (0x0)[0m
+[0;32mI (12493) wifi:pm stop, total sleep time: 3791743 us / 4656452 us[0m
+
+[0;32mI (12493) wifi:<ba-del>idx:0, tid:0[0m
+[0;32mI (12493) wifi:new:<6,0>, old:<6,0>, ap:<6,2>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;33mW (12703) wifi_manager: Reintentando conexión (1/5)[0m
+[0;32mI (12853) wifi:flush txq[0m
+[0;32mI (12853) wifi:stop sw txq[0m
+[0;32mI (12853) wifi:lmac stop hw txq[0m
+I (12953) MAIN: WiFi detenido, entrando en light sleep...
+[0;32mI (12953) MAIN: Despertando de light sleep[0m
+[0;32mI (12953) wifi:mode : sta (24:62:ab:f2:1c:70) + softAP (24:62:ab:f2:1c:71)[0m
+[0;32mI (12953) wifi:enable tsf[0m
+[0;32mI (12953) wifi:Total power save buffer number: 16[0m
+[0;32mI (12963) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (12963) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (12973) MAIN: Esperando reconexión WiFi...[0m
+[0;32mI (12973) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+[0;32mI (12983) wifi:ap channel adjust o:1,1 n:6,2[0m
+[0;32mI (12983) wifi:new:<6,0>, old:<1,1>, ap:<6,2>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (12993) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (13003) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (13013) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (13013) wifi:<ba-add>idx:0 (ifx:0, 70:4d:7b:8c:a3:b8), tid:0, ssn:0, winSize:64[0m
+[0;32mI (13023) wifi:connected with SBC, aid = 8, channel 6, BW20, bssid = 70:4d:7b:8c:a3:b8[0m
+[0;32mI (13023) wifi:security: WPA2-PSK, phy: bgn, rssi: -58[0m
+[0;32mI (13033) wifi:pm start, type: 1[0m
+
+[0;32mI (13043) wifi:AP's beacon interval = 102400 us, DTIM period = 3[0m
+[0;32mI (15533) esp_netif_handlers: sta ip: 192.168.1.216, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (15533) wifi_manager: Conectado. IP local: 192.168.1.216[0m
+[0;32mI (15973) MAIN: WiFi reconectado tras light sleep[0m
+[0;32mI (15973) MAIN: ADC reiniciado tras light sleep[0m
+[0;32mI (15973) MQTT_MANAGER: Cliente MQTT reiniciado correctamente[0m
+[0;32mI (15973) MAIN: MQTT reconectado tras light sleep[0m
+[0;32mI (16623) MQTT_MANAGER: MQTT conectado[0m
+[0;32mI (16633) MQTT_MANAGER: Publicado nivel de luz: 55%[0m
+[0;32mI (16633) MAIN: LDR: 8023.77 Ω, Luz: 55%[0m
+[0;32mI (16633) BME680: Temp: 5242.88 °C | Hum: 32.00 % | Pres: 5242.88 hPa | Gas: 0.00 Ω[0m
+[0;32mI (16643) MQTT_MANAGER: Publicado JSON: {"temperature":5242.88,"humidity":32.00,"pressure":5242.88,"gas":0.00,"light":55}[0m
+[0;32mI (16653) MAIN: Datos enviados a ThingsBoard: {"temperature":5242.88,"humidity":32.00,"pressure":5242.88,"gas":0.00,"light":55}[0m
+[0;32mI (16663) MAIN: Preparando para entrar en light sleep 2000 ms...[0m
+[0;32mI (16663) MAIN: ADC detenido antes de dormir[0m
+[0;32mI (17253) MQTT_MANAGER: Cliente MQTT detenido correctamente[0m
+[0;32mI (17253) MAIN: MQTT desconectado[0m
+[0;32mI (17253) wifi:state: run -> init (0x0)[0m
+[0;32mI (17263) wifi:pm stop, total sleep time: 3360911 us / 4227675 us[0m
+
+[0;32mI (17263) wifi:<ba-del>idx:0, tid:0[0m
+[0;32mI (17263) wifi:new:<6,0>, old:<6,0>, ap:<6,2>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (17303) wifi:flush txq[0m
+[0;32mI (17303) wifi:stop sw txq[0m
+[0;32mI (17303) wifi:lmac stop hw txq[0m
+I (17403) MAIN: WiFi detenido, entrando en light sleep...
+[0;32mI (17403) MAIN: Despertando de light sleep[0m
+[0;32mI (17403) wifi:mode : sta (24:62:ab:f2:1c:70) + softAP (24:62:ab:f2:1c:71)[0m
+[0;32mI (17403) wifi:enable tsf[0m
+[0;32mI (17403) wifi:Total power save buffer number: 16[0m
+[0;32mI (17413) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (17413) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (17423) MAIN: Esperando reconexión WiFi...[0m
+[0;33mW (17473) wifi_manager: Reintentando conexión (1/5)[0m
+[1;31mE (17473) wifi:sta is connecting, return error[0m
+[0;32mI (17473) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+[0;32mI (17483) wifi:ap channel adjust o:1,1 n:6,2[0m
+[0;32mI (17483) wifi:new:<6,0>, old:<1,1>, ap:<6,2>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (17493) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (17503) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (17513) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (17513) wifi:<ba-add>idx:0 (ifx:0, 70:4d:7b:8c:a3:b8), tid:0, ssn:0, winSize:64[0m
+[0;32mI (17543) wifi:connected with SBC, aid = 8, channel 6, BW20, bssid = 70:4d:7b:8c:a3:b8[0m
+[0;32mI (17543) wifi:security: WPA2-PSK, phy: bgn, rssi: -58[0m
+[0;32mI (17543) wifi:pm start, type: 1[0m
+
+[0;32mI (17613) wifi:AP's beacon interval = 102400 us, DTIM period = 3[0m
+[0;32mI (20053) esp_netif_handlers: sta ip: 192.168.1.216, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (20053) wifi_manager: Conectado. IP local: 192.168.1.216[0m
+[0;32mI (20423) MAIN: WiFi reconectado tras light sleep[0m
+[0;32mI (20423) MAIN: ADC reiniciado tras light sleep[0m
+[0;32mI (20423) MQTT_MANAGER: Cliente MQTT reiniciado correctamente[0m
+[0;32mI (20423) MAIN: MQTT reconectado tras light sleep[0m
+[0;32mI (21623) MQTT_MANAGER: MQTT conectado[0m
+[0;32mI (21633) MQTT_MANAGER: Publicado nivel de luz: 56%[0m
+[0;32mI (21633) MAIN: LDR: 7462.69 Ω, Luz: 56%[0m
+[0;32mI (21633) BME680: Temp: 5242.88 °C | Hum: 32.00 % | Pres: 5242.88 hPa | Gas: 0.00 Ω[0m
+[0;32mI (21633) MQTT_MANAGER: Publicado JSON: {"temperature":5242.88,"humidity":32.00,"pressure":5242.88,"gas":0.00,"light":56}[0m
+[0;32mI (21643) MAIN: Datos enviados a ThingsBoard: {"temperature":5242.88,"humidity":32.00,"pressure":5242.88,"gas":0.00,"light":56}[0m
+[0;32mI (21653) MAIN: Preparando para entrar en light sleep 2000 ms...[0m
+[0;32mI (21663) MAIN: ADC detenido antes de dormir[0m
+[0;32mI (22023) MQTT_MANAGER: Cliente MQTT detenido correctamente[0m
+[0;32mI (22023) MAIN: MQTT desconectado[0m
+[0;32mI (22023) wifi:state: run -> init (0x0)[0m
+[0;32mI (22033) wifi:pm stop, total sleep time: 3631231 us / 4485005 us[0m
+
+[0;32mI (22033) wifi:<ba-del>idx:0, tid:0[0m
+[0;32mI (22033) wifi:new:<6,0>, old:<6,0>, ap:<6,2>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (22033) wifi:ieee80211_send_beacon mode switch cause ap destroyed[0m
+[0;32mI (22113) wifi:flush txq[0m
+[0;32mI (22113) wifi:stop sw txq[0m
+[0;32mI (22113) wifi:lmac stop hw txq[0m
+I (22213) MAIN: WiFi detenido, entrando en light sleep...
+[0;32mI (22213) MAIN: Despertando de light sleep[0m
+[0;32mI (22213) wifi:mode : sta (24:62:ab:f2:1c:70) + softAP (24:62:ab:f2:1c:71)[0m
+[0;32mI (22213) wifi:enable tsf[0m
+[0;32mI (22213) wifi:Total power save buffer number: 16[0m
+[0;32mI (22223) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (22223) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (22233) MAIN: Esperando reconexión WiFi...[0m
+[0;33mW (22243) wifi_manager: Reintentando conexión (1/5)[0m
+[1;31mE (22243) wifi:sta is connecting, return error[0m
+[0;32mI (22243) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+[0;32mI (22253) wifi:ap channel adjust o:1,1 n:6,2[0m
+[0;32mI (22253) wifi:new:<6,0>, old:<1,1>, ap:<6,2>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (22263) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (22273) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (22283) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (22293) wifi:<ba-add>idx:0 (ifx:0, 70:4d:7b:8c:a3:b8), tid:0, ssn:0, winSize:64[0m
+[0;32mI (22313) wifi:connected with SBC, aid = 8, channel 6, BW20, bssid = 70:4d:7b:8c:a3:b8[0m
+[0;32mI (22313) wifi:security: WPA2-PSK, phy: bgn, rssi: -51[0m
+[0;32mI (22323) wifi:pm start, type: 1[0m
+
+[0;32mI (22373) wifi:AP's beacon interval = 102400 us, DTIM period = 3[0m
+[0;32mI (24823) esp_netif_handlers: sta ip: 192.168.1.216, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (24823) wifi_manager: Conectado. IP local: 192.168.1.216[0m
+[0;32mI (25233) MAIN: WiFi reconectado tras light sleep[0m
+[0;32mI (25233) MAIN: ADC reiniciado tras light sleep[0m
+[0;32mI (25233) MQTT_MANAGER: Cliente MQTT reiniciado correctamente[0m
+[0;32mI (25233) MAIN: MQTT reconectado tras light sleep[0m
+[0;32mI (26473) MQTT_MANAGER: MQTT conectado[0m
+[0;32mI (26483) MQTT_MANAGER: Publicado nivel de luz: 58%[0m
+[0;32mI (26483) MAIN: LDR: 6991.70 Ω, Luz: 58%[0m
+[0;32mI (26483) BME680: Temp: 5242.88 °C | Hum: 32.00 % | Pres: 5242.88 hPa | Gas: 0.00 Ω[0m
+[0;32mI (26493) MQTT_MANAGER: Publicado JSON: {"temperature":5242.88,"humidity":32.00,"pressure":5242.88,"gas":0.00,"light":58}[0m
+[0;32mI (26503) MAIN: Datos enviados a ThingsBoard: {"temperature":5242.88,"humidity":32.00,"pressure":5242.88,"gas":0.00,"light":58}[0m
+[0;32mI (26513) MAIN: Preparando para entrar en light sleep 2000 ms...[0m
+[0;32mI (26513) MAIN: ADC detenido antes de dormir[0m
+[0;32mI (27093) MQTT_MANAGER: Cliente MQTT detenido correctamente[0m
+[0;32mI (27093) MAIN: MQTT desconectado[0m
+[0;32mI (27093) wifi:state: run -> init (0x0)[0m
+[0;32mI (27103) wifi:pm stop, total sleep time: 3865540 us / 4777815 us[0m
+
+[0;32mI (27103) wifi:<ba-del>idx:0, tid:0[0m
+[0;32mI (27103) wifi:new:<6,0>, old:<6,0>, ap:<6,2>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (27153) wifi:flush txq[0m
+[0;32mI (27153) wifi:stop sw txq[0m
+[0;32mI (27153) wifi:lmac stop hw txq[0m
+I (27253) MAIN: WiFi detenido, entrando en light sleep...
+[0;32mI (27253) MAIN: Despertando de light sleep[0m
+[0;32mI (27253) wifi:mode : sta (24:62:ab:f2:1c:70) + softAP (24:62:ab:f2:1c:71)[0m
+[0;32mI (27253) wifi:enable tsf[0m
+[0;32mI (27253) wifi:Total power save buffer number: 16[0m
+[0;32mI (27263) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (27263) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (27273) MAIN: Esperando reconexión WiFi...[0m
+[0;33mW (27313) wifi_manager: Reintentando conexión (1/5)[0m
+[1;31mE (27313) wifi:sta is connecting, return error[0m
+[0;32mI (27313) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+[0;32mI (27323) wifi:ap channel adjust o:1,1 n:6,2[0m
+[0;32mI (27323) wifi:new:<6,0>, old:<1,1>, ap:<6,2>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (27333) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (27343) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (27353) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (27363) wifi:<ba-add>idx:0 (ifx:0, 70:4d:7b:8c:a3:b8), tid:0, ssn:0, winSize:64[0m
+[0;32mI (27383) wifi:connected with SBC, aid = 8, channel 6, BW20, bssid = 70:4d:7b:8c:a3:b8[0m
+[0;32mI (27383) wifi:security: WPA2-PSK, phy: bgn, rssi: -57[0m
+[0;32mI (27383) wifi:pm start, type: 1[0m
+
+[0;32mI (27553) wifi:AP's beacon interval = 102400 us, DTIM period = 3[0m
+[0;32mI (29893) esp_netif_handlers: sta ip: 192.168.1.216, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (29893) wifi_manager: Conectado. IP local: 192.168.1.216[0m
+[0;32mI (30273) MAIN: WiFi reconectado tras light sleep[0m
+[0;32mI (30273) MAIN: ADC reiniciado tras light sleep[0m
+[0;32mI (30273) MQTT_MANAGER: Cliente MQTT reiniciado correctamente[0m
+[0;32mI (30273) MAIN: MQTT reconectado tras light sleep[0m
+[0;32mI (30383) MQTT_MANAGER: MQTT conectado[0m
+[0;32mI (30393) MQTT_MANAGER: Publicado nivel de luz: 58%[0m
+[0;32mI (30393) MAIN: LDR: 6872.68 Ω, Luz: 58%[0m
+[0;32mI (30393) BME680: Temp: 5242.88 °C | Hum: 32.00 % | Pres: 5242.88 hPa | Gas: 0.00 Ω[0m
+[0;32mI (30393) MQTT_MANAGER: Publicado JSON: {"temperature":5242.88,"humidity":32.00,"pressure":5242.88,"gas":0.00,"light":58}[0m
+[0;32mI (30403) MAIN: Datos enviados a ThingsBoard: {"temperature":5242.88,"humidity":32.00,"pressure":5242.88,"gas":0.00,"light":58}[0m
+[0;32mI (30413) MAIN: Preparando para entrar en light sleep 2000 ms...[0m
+[0;32mI (30423) MAIN: ADC detenido antes de dormir[0m
+[0;32mI (30633) MQTT_MANAGER: Cliente MQTT detenido correctamente[0m
+[0;32mI (30633) MAIN: MQTT desconectado[0m
+[0;32mI (30633) wifi:state: run -> init (0x0)[0m
+[0;32mI (30643) wifi:pm stop, total sleep time: 2531871 us / 3253384 us[0m
+
+[0;32mI (30643) wifi:<ba-del>idx:0, tid:0[0m
+[0;32mI (30643) wifi:new:<6,0>, old:<6,0>, ap:<6,2>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (30693) wifi:flush txq[0m
+[0;32mI (30693) wifi:stop sw txq[0m
+[0;32mI (30693) wifi:lmac stop hw txq[0m
+I (30793) MAIN: WiFi detenido, entrando en light sleep...
+[0;32mI (30793) MAIN: Despertando de light sleep[0m
+[0;32mI (30793) wifi:mode : sta (24:62:ab:f2:1c:70) + softAP (24:62:ab:f2:1c:71)[0m
+[0;32mI (30793) wifi:enable tsf[0m
+[0;32mI (30793) wifi:Total power save buffer number: 16[0m
+[0;32mI (30803) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (30803) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (30813) MAIN: Esperando reconexión WiFi...[0m
+[0;33mW (30853) wifi_manager: Reintentando conexión (1/5)[0m
+[1;31mE (30853) wifi:sta is connecting, return error[0m
+[0;32mI (30853) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+[0;32mI (30863) wifi:ap channel adjust o:1,1 n:6,2[0m
+[0;32mI (30863) wifi:new:<6,0>, old:<1,1>, ap:<6,2>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (30873) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (30883) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (30893) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (30903) wifi:<ba-add>idx:0 (ifx:0, 70:4d:7b:8c:a3:b8), tid:0, ssn:0, winSize:64[0m
+[0;32mI (30913) wifi:connected with SBC, aid = 8, channel 6, BW20, bssid = 70:4d:7b:8c:a3:b8[0m
+[0;32mI (30913) wifi:security: WPA2-PSK, phy: bgn, rssi: -53[0m
+[0;32mI (30913) wifi:pm start, type: 1[0m
+
+[0;32mI (30993) wifi:AP's beacon interval = 102400 us, DTIM period = 3[0m
+[0;32mI (33433) esp_netif_handlers: sta ip: 192.168.1.216, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (33433) wifi_manager: Conectado. IP local: 192.168.1.216[0m
+[0;32mI (33813) MAIN: WiFi reconectado tras light sleep[0m
+[0;32mI (33813) MAIN: ADC reiniciado tras light sleep[0m
+[0;32mI (33813) MQTT_MANAGER: Cliente MQTT reiniciado correctamente[0m
+[0;32mI (33813) MAIN: MQTT reconectado tras light sleep[0m
+[0;32mI (33933) MQTT_MANAGER: MQTT conectado[0m
+[0;32mI (33943) MQTT_MANAGER: Publicado nivel de luz: 58%[0m
+[0;32mI (33943) MAIN: LDR: 6949.50 Ω, Luz: 58%[0m
+[1;31mE (34013) BME680: Error leyendo datos del sensor[0m
+[0;33mW (34013) MAIN: Error leyendo datos del BME680[0m
+[0;32mI (34013) MAIN: Preparando para entrar en light sleep 2000 ms...[0m
+[0;32mI (34013) MAIN: ADC detenido antes de dormir[0m
+[0;32mI (34043) MQTT_MANAGER: Cliente MQTT detenido correctamente[0m
+[0;32mI (34043) MAIN: MQTT desconectado[0m
+[0;32mI (34053) wifi:state: run -> init (0x0)[0m
+[0;32mI (34063) wifi:pm stop, total sleep time: 2425908 us / 3144780 us[0m
+
+[0;32mI (34063) wifi:<ba-del>idx:0, tid:0[0m
+[0;32mI (34063) wifi:new:<6,0>, old:<6,0>, ap:<6,2>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (34143) wifi:flush txq[0m
+[0;32mI (34143) wifi:stop sw txq[0m
+[0;32mI (34143) wifi:lmac stop hw txq[0m
+I (34243) MAIN: WiFi detenido, entrando en light sleep...
+[0;32mI (34243) MAIN: Despertando de light sleep[0m
+[0;32mI (34243) wifi:mode : sta (24:62:ab:f2:1c:70) + softAP (24:62:ab:f2:1c:71)[0m
+[0;32mI (34243) wifi:enable tsf[0m
+[0;32mI (34243) wifi:Total power save buffer number: 16[0m
+[0;32mI (34253) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (34253) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (34263) MAIN: Esperando reconexión WiFi...[0m
+[0;33mW (34273) wifi_manager: Reintentando conexión (1/5)[0m
+[1;31mE (34273) wifi:sta is connecting, return error[0m
+[0;32mI (34273) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+[0;32mI (34323) wifi:ap channel adjust o:1,1 n:6,2[0m
+[0;32mI (34323) wifi:new:<6,0>, old:<1,1>, ap:<6,2>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (34323) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (34343) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (34353) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (34363) wifi:<ba-add>idx:0 (ifx:0, 70:4d:7b:8c:a3:b8), tid:0, ssn:0, winSize:64[0m
+[0;32mI (34383) wifi:connected with SBC, aid = 8, channel 6, BW20, bssid = 70:4d:7b:8c:a3:b8[0m
+[0;32mI (34383) wifi:security: WPA2-PSK, phy: bgn, rssi: -65[0m
+[0;32mI (34393) wifi:pm start, type: 1[0m
+
+[0;32mI (34423) wifi:AP's beacon interval = 102400 us, DTIM period = 3[0m
+[0;32mI (36903) esp_netif_handlers: sta ip: 192.168.1.216, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (36903) wifi_manager: Conectado. IP local: 192.168.1.216[0m
+[0;32mI (37263) MAIN: WiFi reconectado tras light sleep[0m
+[0;32mI (37263) MAIN: ADC reiniciado tras light sleep[0m
+[0;32mI (37263) MQTT_MANAGER: Cliente MQTT reiniciado correctamente[0m
+[0;32mI (37263) MAIN: MQTT reconectado tras light sleep[0m
+[0;32mI (37723) MQTT_MANAGER: MQTT conectado[0m
+[0;32mI (37733) MQTT_MANAGER: Publicado nivel de luz: 55%[0m
+[0;32mI (37733) MAIN: LDR: 7992.09 Ω, Luz: 55%[0m
+[0;32mI (37733) BME680: Temp: 5242.88 °C | Hum: 32.00 % | Pres: 5242.88 hPa | Gas: 0.00 Ω[0m
+[0;32mI (37743) MQTT_MANAGER: Publicado JSON: {"temperature":5242.88,"humidity":32.00,"pressure":5242.88,"gas":0.00,"light":55}[0m
+[0;32mI (37743) MAIN: Datos enviados a ThingsBoard: {"temperature":5242.88,"humidity":32.00,"pressure":5242.88,"gas":0.00,"light":55}[0m
+[0;32mI (37753) MAIN: Preparando para entrar en light sleep 2000 ms...[0m
+[0;32mI (37763) MAIN: ADC detenido antes de dormir[0m
+[0;32mI (37783) MQTT_MANAGER: Cliente MQTT detenido correctamente[0m
+[0;32mI (37783) MAIN: MQTT desconectado[0m
+[0;32mI (37783) wifi:state: run -> init (0x0)[0m
+[0;32mI (37793) wifi:pm stop, total sleep time: 2630766 us / 3401036 us[0m
+
+[0;32mI (37793) wifi:<ba-del>idx:0, tid:0[0m
+[0;32mI (37793) wifi:new:<6,0>, old:<6,0>, ap:<6,2>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (37863) wifi:flush txq[0m
+[0;32mI (37863) wifi:stop sw txq[0m
+[0;32mI (37863) wifi:lmac stop hw txq[0m
+I (37963) MAIN: WiFi detenido, entrando en light sleep...
+[0;32mI (37963) MAIN: Despertando de light sleep[0m
+[0;32mI (37963) wifi:mode : sta (24:62:ab:f2:1c:70) + softAP (24:62:ab:f2:1c:71)[0m
+[0;32mI (37963) wifi:enable tsf[0m
+[0;32mI (37963) wifi:Total power save buffer number: 16[0m
+[0;32mI (37973) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (37973) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (37983) MAIN: Esperando reconexión WiFi...[0m
+[0;33mW (38003) wifi_manager: Reintentando conexión (1/5)[0m
+[1;31mE (38003) wifi:sta is connecting, return error[0m
+[0;32mI (38003) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+[0;32mI (38013) wifi:ap channel adjust o:1,1 n:6,2[0m
+[0;32mI (38013) wifi:new:<6,0>, old:<1,1>, ap:<6,2>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (38023) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (38033) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (38043) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (38053) wifi:<ba-add>idx:0 (ifx:0, 70:4d:7b:8c:a3:b8), tid:0, ssn:0, winSize:64[0m
+[0;32mI (38083) wifi:connected with SBC, aid = 8, channel 6, BW20, bssid = 70:4d:7b:8c:a3:b8[0m
+[0;32mI (38083) wifi:security: WPA2-PSK, phy: bgn, rssi: -49[0m
+[0;32mI (38093) wifi:pm start, type: 1[0m
+
+[0;32mI (38163) wifi:AP's beacon interval = 102400 us, DTIM period = 3[0m
+[0;32mI (40603) esp_netif_handlers: sta ip: 192.168.1.216, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (40603) wifi_manager: Conectado. IP local: 192.168.1.216[0m
+[0;32mI (40983) MAIN: WiFi reconectado tras light sleep[0m
+[0;32mI (40983) MAIN: ADC reiniciado tras light sleep[0m
+[0;32mI (40983) MQTT_MANAGER: Cliente MQTT reiniciado correctamente[0m
+[0;32mI (40983) MAIN: MQTT reconectado tras light sleep[0m
+[0;32mI (41623) MQTT_MANAGER: MQTT conectado[0m
+[0;32mI (41633) MQTT_MANAGER: Publicado nivel de luz: 55%[0m
+[0;32mI (41633) MAIN: LDR: 7889.91 Ω, Luz: 55%[0m
+[0;32mI (41633) BME680: Temp: 5242.88 °C | Hum: 32.00 % | Pres: 5242.88 hPa | Gas: 0.00 Ω[0m
+[0;32mI (41633) MQTT_MANAGER: Publicado JSON: {"temperature":5242.88,"humidity":32.00,"pressure":5242.88,"gas":0.00,"light":55}[0m
+[0;32mI (41643) MAIN: Datos enviados a ThingsBoard: {"temperature":5242.88,"humidity":32.00,"pressure":5242.88,"gas":0.00,"light":55}[0m
+[0;32mI (41653) MAIN: Preparando para entrar en light sleep 2000 ms...[0m
+[0;32mI (41673) MAIN: ADC detenido antes de dormir[0m
+[0;32mI (41693) MQTT_MANAGER: Cliente MQTT detenido correctamente[0m
+[0;32mI (41693) MAIN: MQTT desconectado[0m
+[0;32mI (41693) wifi:state: run -> init (0x0)[0m
+[0;32mI (41703) wifi:pm stop, total sleep time: 2650578 us / 3607613 us[0m
+
+[0;32mI (41703) wifi:<ba-del>idx:0, tid:0[0m
+[0;32mI (41703) wifi:new:<6,0>, old:<6,0>, ap:<6,2>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (41773) wifi:flush txq[0m
+[0;32mI (41773) wifi:stop sw txq[0m
+[0;32mI (41773) wifi:lmac stop hw txq[0m
+I (41873) MAIN: WiFi detenido, entrando en light sleep...
+[0;32mI (41873) MAIN: Despertando de light sleep[0m
+[0;32mI (41873) wifi:mode : sta (24:62:ab:f2:1c:70) + softAP (24:62:ab:f2:1c:71)[0m
+[0;32mI (41873) wifi:enable tsf[0m
+[0;32mI (41873) wifi:Total power save buffer number: 16[0m
+[0;32mI (41883) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (41883) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (41893) MAIN: Esperando reconexión WiFi...[0m
+[0;33mW (41913) wifi_manager: Reintentando conexión (1/5)[0m
+[1;31mE (41913) wifi:sta is connecting, return error[0m
+[0;32mI (41913) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+[0;32mI (41923) wifi:ap channel adjust o:1,1 n:6,2[0m
+[0;32mI (41923) wifi:new:<6,0>, old:<1,1>, ap:<6,2>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (41933) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (41943) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (41953) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (41963) wifi:<ba-add>idx:0 (ifx:0, 70:4d:7b:8c:a3:b8), tid:0, ssn:0, winSize:64[0m
+[0;32mI (41983) wifi:connected with SBC, aid = 8, channel 6, BW20, bssid = 70:4d:7b:8c:a3:b8[0m
+[0;32mI (41983) wifi:security: WPA2-PSK, phy: bgn, rssi: -55[0m
+[0;32mI (41983) wifi:pm start, type: 1[0m
+
+[0;32mI (42013) wifi:AP's beacon interval = 102400 us, DTIM period = 3[0m
+[0;32mI (44503) esp_netif_handlers: sta ip: 192.168.1.216, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (44503) wifi_manager: Conectado. IP local: 192.168.1.216[0m
+[0;32mI (44893) MAIN: WiFi reconectado tras light sleep[0m
+[0;32mI (44893) MAIN: ADC reiniciado tras light sleep[0m
+[0;32mI (44893) MQTT_MANAGER: Cliente MQTT reiniciado correctamente[0m
+[0;32mI (44893) MAIN: MQTT reconectado tras light sleep[0m
+[0;32mI (46323) MQTT_MANAGER: MQTT conectado[0m
+[0;32mI (46323) MQTT_MANAGER: Publicado nivel de luz: 57%[0m
+[0;32mI (46323) MAIN: LDR: 7105.26 Ω, Luz: 57%[0m
+[0;32mI (46323) BME680: Temp: 5242.88 °C | Hum: 32.00 % | Pres: 5242.88 hPa | Gas: 0.00 Ω[0m
+[0;32mI (46333) MQTT_MANAGER: Publicado JSON: {"temperature":5242.88,"humidity":32.00,"pressure":5242.88,"gas":0.00,"light":57}[0m
+[0;32mI (46343) MAIN: Datos enviados a ThingsBoard: {"temperature":5242.88,"humidity":32.00,"pressure":5242.88,"gas":0.00,"light":57}[0m
+[0;32mI (46353) MAIN: Preparando para entrar en light sleep 2000 ms...[0m
+[0;32mI (46353) MAIN: ADC detenido antes de dormir[0m
+[0;32mI (46633) MQTT_MANAGER: Cliente MQTT detenido correctamente[0m
+[0;32mI (46633) MAIN: MQTT desconectado[0m
+[0;32mI (46633) wifi:state: run -> init (0x0)[0m
+[0;32mI (46643) wifi:pm stop, total sleep time: 3552888 us / 4652958 us[0m
+
+[0;32mI (46643) wifi:<ba-del>idx:0, tid:0[0m
+[0;32mI (46643) wifi:new:<6,0>, old:<6,0>, ap:<6,2>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (46723) wifi:flush txq[0m
+[0;32mI (46723) wifi:stop sw txq[0m
+[0;32mI (46723) wifi:lmac stop hw txq[0m
+I (46823) MAIN: WiFi detenido, entrando en light sleep...
+[0;32mI (46823) MAIN: Despertando de light sleep[0m
+[0;32mI (46823) wifi:mode : sta (24:62:ab:f2:1c:70) + softAP (24:62:ab:f2:1c:71)[0m
+[0;32mI (46823) wifi:enable tsf[0m
+[0;32mI (46823) wifi:Total power save buffer number: 16[0m
+[0;32mI (46833) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (46833) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (46843) MAIN: Esperando reconexión WiFi...[0m
+[0;33mW (46853) wifi_manager: Reintentando conexión (1/5)[0m
+[1;31mE (46853) wifi:sta is connecting, return error[0m
+[0;32mI (46853) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+[0;32mI (46863) wifi:ap channel adjust o:1,1 n:6,2[0m
+[0;32mI (46863) wifi:new:<6,0>, old:<1,1>, ap:<6,2>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (46873) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (46893) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (46903) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (46913) wifi:<ba-add>idx:0 (ifx:0, 70:4d:7b:8c:a3:b8), tid:0, ssn:0, winSize:64[0m
+[0;32mI (46933) wifi:connected with SBC, aid = 8, channel 6, BW20, bssid = 70:4d:7b:8c:a3:b8[0m
+[0;32mI (46933) wifi:security: WPA2-PSK, phy: bgn, rssi: -53[0m
+[0;32mI (46933) wifi:pm start, type: 1[0m
+
+[0;32mI (46983) wifi:AP's beacon interval = 102400 us, DTIM period = 3[0m
+[0;32mI (49453) esp_netif_handlers: sta ip: 192.168.1.216, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (49453) wifi_manager: Conectado. IP local: 192.168.1.216[0m
+[0;32mI (49843) MAIN: WiFi reconectado tras light sleep[0m
+[0;32mI (49843) MAIN: ADC reiniciado tras light sleep[0m
+[0;32mI (49843) MQTT_MANAGER: Cliente MQTT reiniciado correctamente[0m
+[0;32mI (49843) MAIN: MQTT reconectado tras light sleep[0m
+[0;32mI (51623) MQTT_MANAGER: MQTT conectado[0m
+[0;32mI (51633) MQTT_MANAGER: Publicado nivel de luz: 54%[0m
+[0;32mI (51633) MAIN: LDR: 8313.95 Ω, Luz: 54%[0m
+[0;32mI (51633) BME680: Temp: 5242.88 °C | Hum: 32.00 % | Pres: 5242.88 hPa | Gas: 0.00 Ω[0m
+[0;32mI (51643) MQTT_MANAGER: Publicado JSON: {"temperature":5242.88,"humidity":32.00,"pressure":5242.88,"gas":0.00,"light":54}[0m
+[0;32mI (51643) MAIN: Datos enviados a ThingsBoard: {"temperature":5242.88,"humidity":32.00,"pressure":5242.88,"gas":0.00,"light":54}[0m
+[0;32mI (51663) MAIN: Preparando para entrar en light sleep 2000 ms...[0m
+[0;32mI (51663) MAIN: ADC detenido antes de dormir[0m
+[0;32mI (52013) MQTT_MANAGER: Cliente MQTT detenido correctamente[0m
+[0;32mI (52013) MAIN: MQTT desconectado[0m
+[0;32mI (52013) wifi:state: run -> init (0x0)[0m
+[0;32mI (52083) wifi:pm stop, total sleep time: 3860293 us / 5142549 us[0m
+
+[0;32mI (52083) wifi:<ba-del>idx:0, tid:0[0m
+[0;32mI (52083) wifi:new:<6,0>, old:<6,0>, ap:<6,2>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (52083) wifi:ieee80211_send_beacon mode switch cause ap destroyed[0m
+[0;32mI (52153) wifi:flush txq[0m
+[0;32mI (52153) wifi:stop sw txq[0m
+[0;32mI (52153) wifi:lmac stop hw txq[0m
+I (52253) MAIN: WiFi detenido, entrando en light sleep...
+[0;32mI (52253) MAIN: Despertando de light sleep[0m
+[0;32mI (52253) wifi:mode : sta (24:62:ab:f2:1c:70) + softAP (24:62:ab:f2:1c:71)[0m
+[0;32mI (52253) wifi:enable tsf[0m
+[0;32mI (52253) wifi:Total power save buffer number: 16[0m
+[0;32mI (52263) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (52263) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (52273) MAIN: Esperando reconexión WiFi...[0m
+[0;33mW (52293) wifi_manager: Reintentando conexión (1/5)[0m
+[1;31mE (52293) wifi:sta is connecting, return error[0m
+[0;32mI (52293) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+[0;32mI (52313) wifi:ap channel adjust o:1,1 n:6,2[0m
+[0;32mI (52313) wifi:new:<6,0>, old:<1,1>, ap:<6,2>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (52313) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (52323) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (52373) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (52393) wifi:connected with SBC, aid = 8, channel 6, BW20, bssid = 70:4d:7b:8c:a3:b8[0m
+[0;32mI (52393) wifi:security: WPA2-PSK, phy: bgn, rssi: -51[0m
+[0;32mI (52403) wifi:pm start, type: 1[0m
+
+[0;32mI (52463) wifi:AP's beacon interval = 102400 us, DTIM period = 3[0m
+[0;32mI (53093) wifi:<ba-add>idx:0 (ifx:0, 70:4d:7b:8c:a3:b8), tid:0, ssn:2, winSize:64[0m
+[0;32mI (54903) esp_netif_handlers: sta ip: 192.168.1.216, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (54903) wifi_manager: Conectado. IP local: 192.168.1.216[0m
+[0;32mI (55273) MAIN: WiFi reconectado tras light sleep[0m
+[0;32mI (55273) MAIN: ADC reiniciado tras light sleep[0m
+[0;32mI (55273) MQTT_MANAGER: Cliente MQTT reiniciado correctamente[0m
+[0;32mI (55273) MAIN: MQTT reconectado tras light sleep[0m
+[0;32mI (55693) MQTT_MANAGER: MQTT conectado[0m
+[0;32mI (55703) MQTT_MANAGER: Publicado nivel de luz: 54%[0m
+[0;32mI (55703) MAIN: LDR: 8305.77 Ω, Luz: 54%[0m
+[0;32mI (55703) BME680: Temp: 5242.88 °C | Hum: 32.00 % | Pres: 5242.88 hPa | Gas: 0.00 Ω[0m
+[0;32mI (55713) MQTT_MANAGER: Publicado JSON: {"temperature":5242.88,"humidity":32.00,"pressure":5242.88,"gas":0.00,"light":54}[0m
+[0;32mI (55723) MAIN: Datos enviados a ThingsBoard: {"temperature":5242.88,"humidity":32.00,"pressure":5242.88,"gas":0.00,"light":54}[0m
+[0;32mI (55733) MAIN: Preparando para entrar en light sleep 2000 ms...[0m
+[0;32mI (55733) MAIN: ADC detenido antes de dormir[0m
+[0;32mI (55753) MQTT_MANAGER: Cliente MQTT detenido correctamente[0m
+[0;32mI (55753) MAIN: MQTT desconectado[0m
+[0;32mI (55753) wifi:state: run -> init (0x0)[0m
+[0;32mI (55763) wifi:pm stop, total sleep time: 2570779 us / 3360249 us[0m
+
+[0;32mI (55763) wifi:<ba-del>idx:0, tid:0[0m
+[0;32mI (55763) wifi:new:<6,0>, old:<6,0>, ap:<6,2>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (55833) wifi:flush txq[0m
+[0;32mI (55833) wifi:stop sw txq[0m
+[0;32mI (55833) wifi:lmac stop hw txq[0m
+I (55933) MAIN: WiFi detenido, entrando en light sleep...
+[0;32mI (55933) MAIN: Despertando de light sleep[0m
+[0;32mI (55933) wifi:mode : sta (24:62:ab:f2:1c:70) + softAP (24:62:ab:f2:1c:71)[0m
+[0;32mI (55933) wifi:enable tsf[0m
+[0;32mI (55933) wifi:Total power save buffer number: 16[0m
+[0;32mI (55943) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (55943) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (55953) MAIN: Esperando reconexión WiFi...[0m
+[0;33mW (55973) wifi_manager: Reintentando conexión (1/5)[0m
+[1;31mE (55973) wifi:sta is connecting, return error[0m
+[0;32mI (55973) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+[0;32mI (55983) wifi:ap channel adjust o:1,1 n:6,2[0m
+[0;32mI (55983) wifi:new:<6,0>, old:<1,1>, ap:<6,2>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (55993) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (56003) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (56013) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (56023) wifi:<ba-add>idx:0 (ifx:0, 70:4d:7b:8c:a3:b8), tid:0, ssn:0, winSize:64[0m
+[0;32mI (56053) wifi:connected with SBC, aid = 8, channel 6, BW20, bssid = 70:4d:7b:8c:a3:b8[0m
+[0;32mI (56053) wifi:security: WPA2-PSK, phy: bgn, rssi: -51[0m
+[0;32mI (56053) wifi:pm start, type: 1[0m
+
+[0;32mI (56113) wifi:AP's beacon interval = 102400 us, DTIM period = 3[0m
+[0;32mI (58563) esp_netif_handlers: sta ip: 192.168.1.216, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (58563) wifi_manager: Conectado. IP local: 192.168.1.216[0m
+[0;32mI (58953) MAIN: WiFi reconectado tras light sleep[0m
+[0;32mI (58953) MAIN: ADC reiniciado tras light sleep[0m
+[0;32mI (58953) MQTT_MANAGER: Cliente MQTT reiniciado correctamente[0m
+[0;32mI (58953) MAIN: MQTT reconectado tras light sleep[0m
+[0;32mI (59623) MQTT_MANAGER: MQTT conectado[0m
+[0;32mI (59633) MQTT_MANAGER: Publicado nivel de luz: 54%[0m
+[0;32mI (59633) MAIN: LDR: 8322.15 Ω, Luz: 54%[0m
+[0;32mI (59633) BME680: Temp: 5242.88 °C | Hum: 32.00 % | Pres: 5242.88 hPa | Gas: 0.00 Ω[0m
+[0;32mI (59633) MQTT_MANAGER: Publicado JSON: {"temperature":5242.88,"humidity":32.00,"pressure":5242.88,"gas":0.00,"light":54}[0m
+[0;32mI (59643) MAIN: Datos enviados a ThingsBoard: {"temperature":5242.88,"humidity":32.00,"pressure":5242.88,"gas":0.00,"light":54}[0m
+[0;32mI (59653) MAIN: Preparando para entrar en light sleep 2000 ms...[0m
+[0;32mI (59663) MAIN: ADC detenido antes de dormir[0m
+[0;32mI (60003) MQTT_MANAGER: Cliente MQTT detenido correctamente[0m
+[0;32mI (60003) MAIN: MQTT desconectado[0m
+[0;32mI (60013) wifi:state: run -> init (0x0)[0m
+[0;32mI (60023) wifi:pm stop, total sleep time: 3017081 us / 3964528 us[0m
+
+[0;32mI (60023) wifi:<ba-del>idx:0, tid:0[0m
+[0;32mI (60023) wifi:new:<6,0>, old:<6,0>, ap:<6,2>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (60083) wifi:flush txq[0m
+[0;32mI (60083) wifi:stop sw txq[0m
+[0;32mI (60083) wifi:lmac stop hw txq[0m
+I (60183) MAIN: WiFi detenido, entrando en light sleep...
+[0;32mI (60183) MAIN: Despertando de light sleep[0m
+[0;32mI (60183) wifi:mode : sta (24:62:ab:f2:1c:70) + softAP (24:62:ab:f2:1c:71)[0m
+[0;32mI (60183) wifi:enable tsf[0m
+[0;32mI (60183) wifi:Total power save buffer number: 16[0m
+[0;32mI (60193) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (60193) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (60203) MAIN: Esperando reconexión WiFi...[0m
+[0;33mW (60233) wifi_manager: Reintentando conexión (1/5)[0m
+[1;31mE (60233) wifi:sta is connecting, return error[0m
+[0;32mI (60233) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+[0;32mI (60243) wifi:ap channel adjust o:1,1 n:6,2[0m
+[0;32mI (60243) wifi:new:<6,0>, old:<1,1>, ap:<6,2>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (60253) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (60263) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (60273) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (60273) wifi:<ba-add>idx:0 (ifx:0, 70:4d:7b:8c:a3:b8), tid:0, ssn:0, winSize:64[0m
+[0;32mI (60293) wifi:connected with SBC, aid = 8, channel 6, BW20, bssid = 70:4d:7b:8c:a3:b8[0m
+[0;32mI (60293) wifi:security: WPA2-PSK, phy: bgn, rssi: -55[0m
+[0;32mI (60293) wifi:pm start, type: 1[0m
+
+[0;32mI (60363) wifi:AP's beacon interval = 102400 us, DTIM period = 3[0m
+[0;32mI (62853) esp_netif_handlers: sta ip: 192.168.1.216, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (62853) wifi_manager: Conectado. IP local: 192.168.1.216[0m
+[0;32mI (63203) MAIN: WiFi reconectado tras light sleep[0m
+[0;32mI (63203) MAIN: ADC reiniciado tras light sleep[0m
+[0;32mI (63203) MQTT_MANAGER: Cliente MQTT reiniciado correctamente[0m
+[0;32mI (63203) MAIN: MQTT reconectado tras light sleep[0m
+[0;32mI (63633) MQTT_MANAGER: MQTT conectado[0m
+[0;32mI (63633) MQTT_MANAGER: Publicado nivel de luz: 54%[0m
+[0;32mI (63633) MAIN: LDR: 8256.80 Ω, Luz: 54%[0m
+[0;32mI (63643) BME680: Temp: 5242.88 °C | Hum: 32.00 % | Pres: 5242.88 hPa | Gas: 0.00 Ω[0m
+[0;32mI (63643) MQTT_MANAGER: Publicado JSON: {"temperature":5242.88,"humidity":32.00,"pressure":5242.88,"gas":0.00,"light":54}[0m
+[0;32mI (63653) MAIN: Datos enviados a ThingsBoard: {"temperature":5242.88,"humidity":32.00,"pressure":5242.88,"gas":0.00,"light":54}[0m
+[0;32mI (63663) MAIN: Preparando para entrar en light sleep 2000 ms...[0m
+[0;32mI (63673) MAIN: ADC detenido antes de dormir[0m
+[0;32mI (63853) MQTT_MANAGER: Cliente MQTT detenido correctamente[0m
+[0;32mI (63853) MAIN: MQTT desconectado[0m
+[0;32mI (63853) wifi:state: run -> init (0x0)[0m
+[0;32mI (63863) wifi:pm stop, total sleep time: 2806997 us / 3563968 us[0m
+
+[0;32mI (63863) wifi:<ba-del>idx:0, tid:0[0m
+[0;32mI (63863) wifi:new:<6,0>, old:<6,0>, ap:<6,2>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (63943) wifi:flush txq[0m
+[0;32mI (63943) wifi:stop sw txq[0m
+[0;32mI (63943) wifi:lmac stop hw txq[0m
+I (64043) MAIN: WiFi detenido, entrando en light sleep...
+[0;32mI (64043) MAIN: Despertando de light sleep[0m
+[0;32mI (64043) wifi:mode : sta (24:62:ab:f2:1c:70) + softAP (24:62:ab:f2:1c:71)[0m
+[0;32mI (64043) wifi:enable tsf[0m
+[0;32mI (64043) wifi:Total power save buffer number: 16[0m
+[0;32mI (64053) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (64053) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (64063) MAIN: Esperando reconexión WiFi...[0m
+[0;33mW (64073) wifi_manager: Reintentando conexión (1/5)[0m
+[1;31mE (64073) wifi:sta is connecting, return error[0m
+[0;32mI (64073) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+[0;32mI (64083) wifi:ap channel adjust o:1,1 n:6,2[0m
+[0;32mI (64083) wifi:new:<6,0>, old:<1,1>, ap:<6,2>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (64093) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (64103) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (64113) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (64133) wifi:<ba-add>idx:0 (ifx:0, 70:4d:7b:8c:a3:b8), tid:0, ssn:0, winSize:64[0m
+[0;32mI (64153) wifi:connected with SBC, aid = 8, channel 6, BW20, bssid = 70:4d:7b:8c:a3:b8[0m
+[0;32mI (64153) wifi:security: WPA2-PSK, phy: bgn, rssi: -52[0m
+[0;32mI (64163) wifi:pm start, type: 1[0m
+
+[0;32mI (64213) wifi:AP's beacon interval = 102400 us, DTIM period = 3[0m
+[0;32mI (66673) esp_netif_handlers: sta ip: 192.168.1.216, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (66673) wifi_manager: Conectado. IP local: 192.168.1.216[0m
+[0;32mI (67063) MAIN: WiFi reconectado tras light sleep[0m
+[0;32mI (67063) MAIN: ADC reiniciado tras light sleep[0m
+[0;32mI (67063) MQTT_MANAGER: Cliente MQTT reiniciado correctamente[0m
+[0;32mI (67063) MAIN: MQTT reconectado tras light sleep[0m
+[0;32mI (67633) MQTT_MANAGER: MQTT conectado[0m
+[0;32mI (67633) MQTT_MANAGER: Publicado nivel de luz: 56%[0m
+[0;32mI (67633) MAIN: LDR: 7727.27 Ω, Luz: 56%[0m
+[0;32mI (67643) BME680: Temp: 5242.88 °C | Hum: 32.00 % | Pres: 5242.88 hPa | Gas: 0.00 Ω[0m
+[0;32mI (67643) MQTT_MANAGER: Publicado JSON: {"temperature":5242.88,"humidity":32.00,"pressure":5242.88,"gas":0.00,"light":56}[0m
+[0;32mI (67653) MAIN: Datos enviados a ThingsBoard: {"temperature":5242.88,"humidity":32.00,"pressure":5242.88,"gas":0.00,"light":56}[0m
+[0;32mI (67663) MAIN: Preparando para entrar en light sleep 2000 ms...[0m
+[0;32mI (67673) MAIN: ADC detenido antes de dormir[0m
+[0;32mI (68013) MQTT_MANAGER: Cliente MQTT detenido correctamente[0m
+[0;32mI (68013) MAIN: MQTT desconectado[0m
+[0;32mI (68013) wifi:state: run -> init (0x0)[0m
+[0;32mI (68023) wifi:pm stop, total sleep time: 3188666 us / 3860756 us[0m
+
+[0;32mI (68023) wifi:<ba-del>idx:0, tid:0[0m
+[0;32mI (68023) wifi:new:<6,0>, old:<6,0>, ap:<6,2>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (68103) wifi:flush txq[0m
+[0;32mI (68103) wifi:stop sw txq[0m
+[0;32mI (68103) wifi:lmac stop hw txq[0m
+I (68203) MAIN: WiFi detenido, entrando en light sleep...
+[0;32mI (68203) MAIN: Despertando de light sleep[0m
+[0;32mI (68203) wifi:mode : sta (24:62:ab:f2:1c:70) + softAP (24:62:ab:f2:1c:71)[0m
+[0;32mI (68203) wifi:enable tsf[0m
+[0;32mI (68203) wifi:Total power save buffer number: 16[0m
+[0;32mI (68213) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (68213) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (68223) MAIN: Esperando reconexión WiFi...[0m
+[0;33mW (68233) wifi_manager: Reintentando conexión (1/5)[0m
+[1;31mE (68233) wifi:sta is connecting, return error[0m
+[0;32mI (68233) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+[0;32mI (68243) wifi:ap channel adjust o:1,1 n:6,2[0m
+[0;32mI (68243) wifi:new:<6,0>, old:<1,1>, ap:<6,2>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (68253) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (68263) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (68273) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (68283) wifi:<ba-add>idx:0 (ifx:0, 70:4d:7b:8c:a3:b8), tid:0, ssn:0, winSize:64[0m
+[0;32mI (68303) wifi:connected with SBC, aid = 8, channel 6, BW20, bssid = 70:4d:7b:8c:a3:b8[0m
+[0;32mI (68303) wifi:security: WPA2-PSK, phy: bgn, rssi: -56[0m
+[0;32mI (68303) wifi:pm start, type: 1[0m
+
+[0;32mI (68363) wifi:AP's beacon interval = 102400 us, DTIM period = 3[0m
+[0;32mI (70813) esp_netif_handlers: sta ip: 192.168.1.216, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (70813) wifi_manager: Conectado. IP local: 192.168.1.216[0m
+[0;32mI (71223) MAIN: WiFi reconectado tras light sleep[0m
+[0;32mI (71223) MAIN: ADC reiniciado tras light sleep[0m
+[0;32mI (71223) MQTT_MANAGER: Cliente MQTT reiniciado correctamente[0m
+[0;32mI (71223) MAIN: MQTT reconectado tras light sleep[0m
+[0;32mI (71903) MQTT_MANAGER: MQTT conectado[0m
+[0;32mI (71903) MQTT_MANAGER: Publicado nivel de luz: 56%[0m
+[0;32mI (71903) MAIN: LDR: 7750.33 Ω, Luz: 56%[0m
+[0;32mI (71913) BME680: Temp: 5242.88 °C | Hum: 32.00 % | Pres: 5242.88 hPa | Gas: 0.00 Ω[0m
+[0;32mI (71923) MQTT_MANAGER: Publicado JSON: {"temperature":5242.88,"humidity":32.00,"pressure":5242.88,"gas":0.00,"light":56}[0m
+[0;32mI (71923) MAIN: Datos enviados a ThingsBoard: {"temperature":5242.88,"humidity":32.00,"pressure":5242.88,"gas":0.00,"light":56}[0m
+[0;32mI (71933) MAIN: Preparando para entrar en light sleep 2000 ms...[0m
+[0;32mI (71943) MAIN: ADC detenido antes de dormir[0m
+[0;32mI (71963) MQTT_MANAGER: Cliente MQTT detenido correctamente[0m
+[0;32mI (71963) MAIN: MQTT desconectado[0m
+[0;32mI (71963) wifi:state: run -> init (0x0)[0m
+[0;32mI (71973) wifi:pm stop, total sleep time: 2866097 us / 3665595 us[0m
+
+[0;32mI (71973) wifi:<ba-del>idx:0, tid:0[0m
+[0;32mI (71973) wifi:new:<6,0>, old:<6,0>, ap:<6,2>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (72023) wifi:flush txq[0m
+[0;32mI (72023) wifi:stop sw txq[0m
+[0;32mI (72023) wifi:lmac stop hw txq[0m
+I (72123) MAIN: WiFi detenido, entrando en light sleep...
+[0;32mI (72123) MAIN: Despertando de light sleep[0m
+[0;32mI (72123) wifi:mode : sta (24:62:ab:f2:1c:70) + softAP (24:62:ab:f2:1c:71)[0m
+[0;32mI (72123) wifi:enable tsf[0m
+[0;32mI (72123) wifi:Total power save buffer number: 16[0m
+[0;32mI (72133) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (72133) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (72143) MAIN: Esperando reconexión WiFi...[0m
+[0;33mW (72183) wifi_manager: Reintentando conexión (1/5)[0m
+[1;31mE (72183) wifi:sta is connecting, return error[0m
+[0;32mI (72183) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+[0;32mI (72193) wifi:ap channel adjust o:1,1 n:6,2[0m
+[0;32mI (72193) wifi:new:<6,0>, old:<1,1>, ap:<6,2>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (72203) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (72213) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (72223) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (72233) wifi:<ba-add>idx:0 (ifx:0, 70:4d:7b:8c:a3:b8), tid:0, ssn:0, winSize:64[0m
+[0;32mI (72243) wifi:connected with SBC, aid = 8, channel 6, BW20, bssid = 70:4d:7b:8c:a3:b8[0m
+[0;32mI (72243) wifi:security: WPA2-PSK, phy: bgn, rssi: -52[0m
+[0;32mI (72253) wifi:pm start, type: 1[0m
+
+[0;32mI (72313) wifi:AP's beacon interval = 102400 us, DTIM period = 3[0m
+[0;32mI (74763) esp_netif_handlers: sta ip: 192.168.1.216, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (74763) wifi_manager: Conectado. IP local: 192.168.1.216[0m
+[0;32mI (75143) MAIN: WiFi reconectado tras light sleep[0m
+[0;32mI (75143) MAIN: ADC reiniciado tras light sleep[0m
+[0;32mI (75143) MQTT_MANAGER: Cliente MQTT reiniciado correctamente[0m
+[0;32mI (75143) MAIN: MQTT reconectado tras light sleep[0m
+[0;32mI (75773) MQTT_MANAGER: MQTT conectado[0m
+[0;32mI (75783) MQTT_MANAGER: Publicado nivel de luz: 56%[0m
+[0;32mI (75783) MAIN: LDR: 7734.95 Ω, Luz: 56%[0m
+[0;32mI (75783) BME680: Temp: 5242.88 °C | Hum: 32.00 % | Pres: 5242.88 hPa | Gas: 0.00 Ω[0m
+[0;32mI (75793) MQTT_MANAGER: Publicado JSON: {"temperature":5242.88,"humidity":32.00,"pressure":5242.88,"gas":0.00,"light":56}[0m
+[0;32mI (75803) MAIN: Datos enviados a ThingsBoard: {"temperature":5242.88,"humidity":32.00,"pressure":5242.88,"gas":0.00,"light":56}[0m
+[0;32mI (75813) MAIN: Preparando para entrar en light sleep 2000 ms...[0m
+[0;32mI (75813) MAIN: ADC detenido antes de dormir[0m
+[0;32mI (76003) MQTT_MANAGER: Cliente MQTT detenido correctamente[0m
+[0;32mI (76003) MAIN: MQTT desconectado[0m
+[0;32mI (76003) wifi:state: run -> init (0x0)[0m
+[0;32mI (76013) wifi:pm stop, total sleep time: 2854407 us / 3758845 us[0m
+
+[0;32mI (76013) wifi:<ba-del>idx:0, tid:0[0m
+[0;32mI (76013) wifi:new:<6,0>, old:<6,0>, ap:<6,2>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (76083) wifi:flush txq[0m
+[0;32mI (76083) wifi:stop sw txq[0m
+[0;32mI (76083) wifi:lmac stop hw txq[0m
+I (76183) MAIN: WiFi detenido, entrando en light sleep...
+[0;32mI (76183) MAIN: Despertando de light sleep[0m
+[0;32mI (76183) wifi:mode : sta (24:62:ab:f2:1c:70) + softAP (24:62:ab:f2:1c:71)[0m
+[0;32mI (76183) wifi:enable tsf[0m
+[0;32mI (76183) wifi:Total power save buffer number: 16[0m
+[0;32mI (76193) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (76193) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (76203) MAIN: Esperando reconexión WiFi...[0m
+[0;33mW (76223) wifi_manager: Reintentando conexión (1/5)[0m
+[1;31mE (76223) wifi:sta is connecting, return error[0m
+[0;32mI (76223) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+[0;32mI (76233) wifi:ap channel adjust o:1,1 n:6,2[0m
+[0;32mI (76233) wifi:new:<6,0>, old:<1,1>, ap:<6,2>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (76243) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (76253) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (76263) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (76293) wifi:<ba-add>idx:0 (ifx:0, 70:4d:7b:8c:a3:b8), tid:0, ssn:0, winSize:64[0m
+[0;32mI (76313) wifi:connected with SBC, aid = 8, channel 6, BW20, bssid = 70:4d:7b:8c:a3:b8[0m
+[0;32mI (76313) wifi:security: WPA2-PSK, phy: bgn, rssi: -51[0m
+[0;32mI (76323) wifi:pm start, type: 1[0m
+
+[0;32mI (76363) wifi:AP's beacon interval = 102400 us, DTIM period = 3[0m

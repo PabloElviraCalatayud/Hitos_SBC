@@ -3,7 +3,7 @@ idf_component_register(
     "main.c"
     "drivers/adc_driver.c"
     "sensors/ldr_sensor.c"
-    "sensors/dht_sensor.c"        
+    "sensors/bme680.c"        
     "network/wifi_manager.c"
     "network/mqtt_manager.c"
     "utils/math_utils.c"

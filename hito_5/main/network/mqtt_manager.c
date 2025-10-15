@@ -104,6 +104,26 @@ void mqtt_manager_publish_env(float temperature, float humidity) {
   cJSON_Delete(root);
 }
 
+void mqtt_manager_publish_json(const char *json_payload) {
+  if (!client) {
+    ESP_LOGW(TAG, "Cliente MQTT no inicializado");
+    return;
+  }
+
+  if (!json_payload || strlen(json_payload) == 0) {
+    ESP_LOGW(TAG, "Payload JSON vacío o nulo");
+    return;
+  }
+
+  int msg_id = esp_mqtt_client_publish(client, "v1/devices/me/telemetry", json_payload, 0, 1, 0);
+  if (msg_id >= 0) {
+    ESP_LOGI(TAG, "Publicado JSON: %s", json_payload);
+  } else {
+    ESP_LOGE(TAG, "Error publicando JSON (msg_id=%d)", msg_id);
+  }
+}
+
+
 void mqtt_manager_set_rpc_callback(mqtt_rpc_cb_t cb) {
   s_rpc_cb = cb;
 }
