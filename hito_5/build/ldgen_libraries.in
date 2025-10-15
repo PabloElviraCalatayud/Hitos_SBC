@@ -157,6 +157,8 @@ $<TARGET_FILE:idf::rt>
 $<TARGET_FILE:idf::spiffs>
 $<TARGET_FILE:idf::wifi_provisioning>
 $<TARGET_FILE:__idf_json>
+$<TARGET_FILE:idf::bme68x>
 $<TARGET_FILE:idf::main>
 $<TARGET_FILE:__idf_mqtt>
 $<TARGET_FILE:__idf_spiffs>
+$<TARGET_FILE:__idf_bme68x>

@@ -119,6 +119,7 @@
 		"/home/pelvira/Documents/Universidad/7_Septimo_Semestre/SBC/Hitos_SBC/hito_5/build/esp-idf/ulp/cmake_install.cmake",
 		"/home/pelvira/Documents/Universidad/7_Septimo_Semestre/SBC/Hitos_SBC/hito_5/build/esp-idf/usb/cmake_install.cmake",
 		"/home/pelvira/Documents/Universidad/7_Septimo_Semestre/SBC/Hitos_SBC/hito_5/build/esp-idf/wifi_provisioning/cmake_install.cmake",
+		"/home/pelvira/Documents/Universidad/7_Septimo_Semestre/SBC/Hitos_SBC/hito_5/build/esp-idf/bme68x/cmake_install.cmake",
 		"/home/pelvira/Documents/Universidad/7_Septimo_Semestre/SBC/Hitos_SBC/hito_5/build/esp-idf/main/cmake_install.cmake"
 	],
 	"Parallel" : false
