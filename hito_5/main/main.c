@@ -5,6 +5,7 @@
 #include "sensors/ldr_sensor.h"
 #include "sensors/bme680_sensor.h"
 #include "utils/math_utils.h"
+#include "utils/telegram_bot.h"
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
 #include "esp_log.h"
@@ -85,6 +86,10 @@ void app_main(void) {
     vTaskDelay(pdMS_TO_TICKS(500));
   }
   ESP_LOGI(TAG, "WiFi conectado.");
+
+  // ---------- Inicialización Telegram ----------
+  telegram_bot_start();
+  ESP_LOGI(TAG, "Bot de Telegram iniciado correctamente");
 
   vTaskDelay(pdMS_TO_TICKS(2000)); // tiempo para estabilidad post arranque
 

@@ -1,0 +1,454 @@
+Command: /home/pelvira/.espressif/python_env/idf5.5_py3.13_env/bin/python /home/pelvira/esp/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /home/pelvira/Documents/Universidad/7_Septimo_Semestre/SBC/Hitos_SBC/hito_5/build/hito_5.elf /home/pelvira/Documents/Universidad/7_Septimo_Semestre/SBC/Hitos_SBC/hito_5/build/bootloader/bootloader.elf -m '/home/pelvira/.espressif/python_env/idf5.5_py3.13_env/bin/python' '/home/pelvira/esp/esp-idf/tools/idf.py'
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5.1-dirty 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Oct 18 2025 19:33:04[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (38) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00005000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000e000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00200000[0m
+[0;32mI (78) boot:  3 spiffs           Unknown data     01 82 00210000 000f0000[0m
+[0;32mI (84) boot: End of partition table[0m
+[0;32mI (88) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=2569ch (153244) map[0m
+[0;32mI (147) esp_image: segment 1: paddr=000356c4 vaddr=3ffb0000 size=03f9ch ( 16284) load[0m
+[0;32mI (154) esp_image: segment 2: paddr=00039668 vaddr=40080000 size=069b0h ( 27056) load[0m
+[0;32mI (164) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=bd2c0h (774848) map[0m
+[0;32mI (429) esp_image: segment 4: paddr=000fd2e8 vaddr=400869b0 size=14670h ( 83568) load[0m
+[0;32mI (462) esp_image: segment 5: paddr=00111960 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (475) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (475) boot: Disabling RNG early entropy source...[0m
+[0;32mI (486) cpu_start: Multicore app[0m
+[0;32mI (494) cpu_start: Pro cpu start user code[0m
+[0;32mI (494) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (495) app_init: Application information:[0m
+[0;32mI (495) app_init: Project name:     hito_5[0m
+[0;32mI (498) app_init: App version:      001b579-dirty[0m
+[0;32mI (503) app_init: Compile time:     Oct 18 2025 19:32:52[0m
+[0;32mI (508) app_init: ELF file SHA256:  ead702d07...[0m
+[0;32mI (512) app_init: ESP-IDF:          v5.5.1-dirty[0m
+[0;32mI (516) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (520) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (524) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (528) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (535) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (540) heap_init: At 3FFB8718 len 000278E8 (158 KiB): DRAM[0m
+[0;32mI (545) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (550) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (556) heap_init: At 4009B020 len 00004FE0 (19 KiB): IRAM[0m
+[0;33mW (562) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;32mI (574) spi_flash: detected chip: generic[0m
+[0;32mI (578) spi_flash: flash io: dio[0m
+[0;33mW (581) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (591) main_task: Started on CPU0[0m
+[0;32mI (601) main_task: Calling app_main()[0m
+[0;33mW (721) wifi_manager: No hay credenciales guardadas[0m
+[0;32mI (731) wifi:wifi driver task: 3ffc12f8, prio:23, stack:6656, core=0[0m
+[0;32mI (741) wifi:wifi firmware version: 14da9b7[0m
+[0;32mI (741) wifi:wifi certification version: v7.0[0m
+[0;32mI (741) wifi:config NVS flash: enabled[0m
+[0;32mI (741) wifi:config nano formatting: disabled[0m
+[0;32mI (751) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (751) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (761) wifi:Init management short buffer num: 32[0m
+[0;32mI (761) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (761) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (771) wifi:Init static rx buffer num: 10[0m
+[0;32mI (771) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (781) wifi_init: rx ba win: 6[0m
+[0;32mI (781) wifi_init: accept mbox: 6[0m
+[0;32mI (781) wifi_init: tcpip mbox: 32[0m
+[0;32mI (781) wifi_init: udp mbox: 6[0m
+[0;32mI (791) wifi_init: tcp mbox: 6[0m
+[0;32mI (791) wifi_init: tcp tx win: 5760[0m
+[0;32mI (791) wifi_init: tcp rx win: 5760[0m
+[0;32mI (801) wifi_init: tcp mss: 1440[0m
+[0;32mI (801) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (801) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (811) phy_init: phy_version 4861,b71b5ad,Aug  5 2025,11:16:06[0m
+[0;32mI (901) wifi:mode : sta (ec:e3:34:b3:be:70) + softAP (ec:e3:34:b3:be:71)[0m
+[0;32mI (901) wifi:enable tsf[0m
+[0;32mI (901) wifi:Total power save buffer number: 16[0m
+[0;32mI (901) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (911) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (921) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+[0;32mI (931) wifi:new:<1,1>, old:<1,1>, ap:<1,1>, sta:<1,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (931) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (931) wifi_manager: Servidor web iniciado[0m
+[0;32mI (931) wifi_manager: AP iniciado con SSID: ESP32_B3BE71[0m
+[0;32mI (941) MAIN: Esperando conexión WiFi...[0m
+[0;32mI (951) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (961) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (971) wifi:state: run -> init (0x2c0)[0m
+[0;32mI (981) wifi:new:<1,0>, old:<1,1>, ap:<1,1>, sta:<1,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;33mW (1181) wifi_manager: Reintentando conexión (1/5)[0m
+[0;33mW (1271) wifi:tx null, bss is null[0m
+[0;33mW (4221) wifi_manager: Reintentando conexión (2/5)[0m
+[0;32mI (4231) wifi:new:<1,1>, old:<1,0>, ap:<1,1>, sta:<1,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (4231) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (4251) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (4271) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (4301) wifi:connected with testwifi1, aid = 1, channel 1, BW20, bssid = 86:c3:da:74:39:c1[0m
+[0;32mI (4301) wifi:security: WPA2-PSK, phy: bgn, rssi: -40[0m
+[0;32mI (4301) wifi:pm start, type: 1[0m
+
+[0;32mI (4301) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (4371) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us[0m
+[0;32mI (4371) wifi:AP's beacon interval = 102400 us, DTIM period = 2[0m
+[0;32mI (5331) esp_netif_handlers: sta ip: 10.176.194.228, mask: 255.255.255.0, gw: 10.176.194.83[0m
+[0;32mI (5331) wifi_manager: Conectado. IP local: 10.176.194.228[0m
+[0;32mI (5441) MAIN: WiFi conectado.[0m
+[0;32mI (5441) TELEGRAM_BOT: Lanzando tarea Telegram...[0m
+[0;32mI (5441) MAIN: Bot de Telegram iniciado correctamente[0m
+[0;32mI (5441) TELEGRAM_BOT: Bot de Telegram iniciado.[0m
+[0;32mI (5461) wifi:<ba-add>idx:0 (ifx:0, 86:c3:da:74:39:c1), tid:0, ssn:4, winSize:64[0m
+[0;32mI (6651) TELEGRAM_BOT: Webhook eliminado (si existía).[0m
+[0;32mI (6651) TELEGRAM_BOT: Free heap antes de HTTP: 195016 bytes[0m
+[0;32mI (7441) MQTT_MANAGER: Iniciando MQTT con broker: mqtt://192.168.1.89:1885[0m
+[0;32mI (7451) LDR_SENSOR: LDR inicializado (canal ADC0)[0m
+[0;32mI (7451) BME680_SENSOR: Inicializando BME680...[0m
+[1;31mE (7451) BME680_SENSOR: Error en bme68x_init (-2)[0m
+[1;31mE (7451) MAIN: Error inicializando BME680[0m
+[0;32mI (10221) TELEGRAM_BOT: Free heap después de HTTP: 180956 bytes (diff: -14060)[0m
+[0;32mI (13221) TELEGRAM_BOT: Free heap antes de HTTP: 181064 bytes[0m
+[0;32mI (17181) TELEGRAM_BOT: Free heap después de HTTP: 180732 bytes (diff: -332)[0m
+[1;31mE (17451) esp-tls: [sock=58] select() timeout[0m
+[1;31mE (17451) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (17451) mqtt_client: Error transport connect[0m
+[0;32mI (17451) MQTT_MANAGER: Publicado nivel de luz: 56%[0m
+[0;32mI (17451) MAIN: LDR: 7635.66 Ω, Luz: 56%[0m
+[0;33mW (17561) BME680_SENSOR: No se pudieron obtener datos válidos (-2)[0m
+[0;33mW (17561) MAIN: Error leyendo datos del BME680[0m
+[0;32mI (17561) MAIN: Preparando para entrar en light sleep 2000 ms...[0m
+[0;32mI (17561) MAIN: ADC detenido antes de dormir[0m
+[0;32mI (20181) TELEGRAM_BOT: Free heap antes de HTTP: 181424 bytes[0m
+[0;32mI (21651) TELEGRAM_BOT: 📩 Mensaje recibido: a[0m
+[0;32mI (22451) MQTT_MANAGER: Cliente MQTT detenido correctamente[0m
+[0;32mI (22451) MAIN: MQTT desconectado[0m
+[0;32mI (22451) wifi:state: run -> init (0x0)[0m
+[0;32mI (22461) wifi:pm stop, total sleep time: 12826168 us / 18152357 us[0m
+
+[0;32mI (22461) wifi:<ba-del>idx:0, tid:0[0m
+[0;32mI (22461) wifi:new:<1,0>, old:<1,1>, ap:<1,1>, sta:<1,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (22471) esp-tls-mbedtls: mbedtls_ssl_handshake returned -0x004C[0m
+[0;32mI (22471) esp-tls-mbedtls: Certificate verified.[0m
+[1;31mE (22471) esp-tls: Failed to open new connection[0m
+[1;31mE (22481) transport_base: Failed to open a new connection[0m
+[1;31mE (22481) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (22491) TELEGRAM_BOT: Error enviando mensaje: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (22501) TELEGRAM_BOT: Free heap después de HTTP: 193420 bytes (diff: 11996)[0m
+[0;32mI (22511) wifi:flush txq[0m
+[0;32mI (22511) wifi:stop sw txq[0m
+[0;32mI (22511) wifi:lmac stop hw txq[0m
+I (22611) MAIN: WiFi detenido, entrando en light sleep...
+[0;32mI (22611) MAIN: Despertando de light sleep[0m
+[0;32mI (22611) wifi:mode : sta (ec:e3:34:b3:be:70) + softAP (ec:e3:34:b3:be:71)[0m
+[0;32mI (22611) wifi:enable tsf[0m
+[0;32mI (22611) wifi:Total power save buffer number: 16[0m
+[0;32mI (22621) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (22621) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (22631) MAIN: Esperando reconexión WiFi...[0m
+[0;33mW (22671) wifi_manager: Reintentando conexión (1/5)[0m
+[1;31mE (22671) wifi:sta is connecting, return error[0m
+[0;32mI (22671) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+[0;32mI (22691) wifi:new:<1,1>, old:<1,1>, ap:<1,1>, sta:<1,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (22691) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (22741) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (22761) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (22791) wifi:connected with testwifi1, aid = 1, channel 1, BW20, bssid = 86:c3:da:74:39:c1[0m
+[0;32mI (22791) wifi:security: WPA2-PSK, phy: bgn, rssi: -43[0m
+[0;32mI (22801) wifi:pm start, type: 1[0m
+
+[0;32mI (22801) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (22871) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us[0m
+[0;32mI (22871) wifi:AP's beacon interval = 102400 us, DTIM period = 2[0m
+[0;32mI (24321) esp_netif_handlers: sta ip: 10.176.194.228, mask: 255.255.255.0, gw: 10.176.194.83[0m
+[0;32mI (24321) wifi_manager: Conectado. IP local: 10.176.194.228[0m
+[0;32mI (24631) MAIN: WiFi reconectado tras light sleep[0m
+[0;32mI (24631) MAIN: ADC reiniciado tras light sleep[0m
+[0;32mI (24631) MQTT_MANAGER: Cliente MQTT reiniciado correctamente[0m
+[0;32mI (24631) MAIN: MQTT reconectado tras light sleep[0m
+[0;32mI (25501) TELEGRAM_BOT: Free heap antes de HTTP: 180852 bytes[0m
+[0;32mI (25631) wifi:<ba-add>idx:0 (ifx:0, 86:c3:da:74:39:c1), tid:0, ssn:4, winSize:64[0m
+[0;32mI (26891) TELEGRAM_BOT: 📩 Mensaje recibido: a[0m
+[0;32mI (28311) TELEGRAM_BOT: Mensaje enviado (HTTP 200): ❓ Comando no reconocido.[0m
+Usa /help para ver la lista.
+[0;32mI (28321) TELEGRAM_BOT: Free heap después de HTTP: 179924 bytes (diff: -928)[0m
+[0;32mI (31321) TELEGRAM_BOT: Free heap antes de HTTP: 180356 bytes[0m
+[0;32mI (32631) TELEGRAM_BOT: 📩 Mensaje recibido: aa[0m
+[0;32mI (34451) TELEGRAM_BOT: Mensaje enviado (HTTP 200): ❓ Comando no reconocido.[0m
+Usa /help para ver la lista.
+[0;32mI (34451) TELEGRAM_BOT: Free heap después de HTTP: 179296 bytes (diff: -1060)[0m
+[1;31mE (34641) esp-tls: [sock=57] select() timeout[0m
+[1;31mE (34641) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (34641) mqtt_client: Error transport connect[0m
+[0;32mI (34641) MQTT_MANAGER: Publicado nivel de luz: 56%[0m
+[0;32mI (34641) MAIN: LDR: 7635.66 Ω, Luz: 56%[0m
+[0;33mW (34751) BME680_SENSOR: No se pudieron obtener datos válidos (-2)[0m
+[0;33mW (34751) MAIN: Error leyendo datos del BME680[0m
+[0;32mI (34751) MAIN: Preparando para entrar en light sleep 2000 ms...[0m
+[0;32mI (34751) MAIN: ADC detenido antes de dormir[0m
+[0;32mI (37461) TELEGRAM_BOT: Free heap antes de HTTP: 180528 bytes[0m
+[0;32mI (38961) TELEGRAM_BOT: 📩 Mensaje recibido: aaa[0m
+[0;32mI (39641) MQTT_MANAGER: Cliente MQTT detenido correctamente[0m
+[0;32mI (39641) MAIN: MQTT desconectado[0m
+[0;32mI (39641) wifi:state: run -> init (0x0)[0m
+[0;32mI (39651) wifi:pm stop, total sleep time: 11494221 us / 16850433 us[0m
+
+[0;32mI (39651) wifi:<ba-del>idx:0, tid:0[0m
+[0;32mI (39651) wifi:new:<1,0>, old:<1,1>, ap:<1,1>, sta:<1,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (39701) wifi:flush txq[0m
+[0;32mI (39701) wifi:stop sw txq[0m
+[0;32mI (39701) wifi:lmac stop hw txq[0m
+I (39801) MAIN: WiFi detenido, entrando en light sleep...
+[0;32mI (39801) MAIN: Despertando de light sleep[0m
+[0;32mI (39801) wifi:mode : sta (ec:e3:34:b3:be:70) + softAP (ec:e3:34:b3:be:71)[0m
+[0;32mI (39801) wifi:enable tsf[0m
+[0;32mI (39801) wifi:Total power save buffer number: 16[0m
+[0;32mI (39811) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (39811) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (39821) MAIN: Esperando reconexión WiFi...[0m
+[0;33mW (39861) wifi_manager: Reintentando conexión (1/5)[0m
+[1;31mE (39861) wifi:sta is connecting, return error[0m
+[0;32mI (39861) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+[0;32mI (39871) wifi:new:<1,1>, old:<1,1>, ap:<1,1>, sta:<1,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (39881) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (39901) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (39911) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (39951) wifi:connected with testwifi1, aid = 1, channel 1, BW20, bssid = 86:c3:da:74:39:c1[0m
+[0;32mI (39951) wifi:security: WPA2-PSK, phy: bgn, rssi: -43[0m
+[0;32mI (39951) wifi:pm start, type: 1[0m
+
+[0;32mI (39951) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[1;31mE (40061) esp-tls-mbedtls: mbedtls_ssl_handshake returned -0x004E[0m
+[0;32mI (40061) esp-tls-mbedtls: Certificate verified.[0m
+[1;31mE (40061) esp-tls: Failed to open new connection[0m
+[1;31mE (40061) transport_base: Failed to open a new connection[0m
+[0;32mI (40061) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us[0m
+[1;31mE (40071) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;32mI (40071) wifi:AP's beacon interval = 102400 us, DTIM period = 2[0m
+[1;31mE (40081) TELEGRAM_BOT: Error enviando mensaje: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (40091) TELEGRAM_BOT: Free heap después de HTTP: 187464 bytes (diff: 6936)[0m
+[0;32mI (41261) esp_netif_handlers: sta ip: 10.176.194.228, mask: 255.255.255.0, gw: 10.176.194.83[0m
+[0;32mI (41261) wifi_manager: Conectado. IP local: 10.176.194.228[0m
+[0;32mI (41321) MAIN: WiFi reconectado tras light sleep[0m
+[0;32mI (41321) MAIN: ADC reiniciado tras light sleep[0m
+[0;32mI (41321) MQTT_MANAGER: Cliente MQTT reiniciado correctamente[0m
+[0;32mI (41321) MAIN: MQTT reconectado tras light sleep[0m
+[0;32mI (41341) wifi:<ba-add>idx:0 (ifx:0, 86:c3:da:74:39:c1), tid:0, ssn:4, winSize:64[0m
+[0;32mI (43101) TELEGRAM_BOT: Free heap antes de HTTP: 179908 bytes[0m
+[0;32mI (44541) TELEGRAM_BOT: 📩 Mensaje recibido: a[0m
+[0;32mI (45981) TELEGRAM_BOT: Mensaje enviado (HTTP 200): ❓ Comando no reconocido.[0m
+Usa /help para ver la lista.
+[0;32mI (45991) TELEGRAM_BOT: Free heap después de HTTP: 178848 bytes (diff: -1060)[0m
+[0;32mI (48991) TELEGRAM_BOT: Free heap antes de HTTP: 179484 bytes[0m
+[0;32mI (50491) TELEGRAM_BOT: 📩 Mensaje recibido: aa[0m
+[1;31mE (51331) esp-tls: [sock=57] select() timeout[0m
+[1;31mE (51331) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (51331) mqtt_client: Error transport connect[0m
+[0;32mI (51331) MQTT_MANAGER: Publicado nivel de luz: 56%[0m
+[0;32mI (51331) MAIN: LDR: 7628.07 Ω, Luz: 56%[0m
+[0;33mW (51441) BME680_SENSOR: No se pudieron obtener datos válidos (-2)[0m
+[0;33mW (51441) MAIN: Error leyendo datos del BME680[0m
+[0;32mI (51441) MAIN: Preparando para entrar en light sleep 2000 ms...[0m
+[0;32mI (51441) MAIN: ADC detenido antes de dormir[0m
+[0;32mI (52121) TELEGRAM_BOT: Mensaje enviado (HTTP 200): ❓ Comando no reconocido.[0m
+Usa /help para ver la lista.
+[0;32mI (52131) TELEGRAM_BOT: Free heap después de HTTP: 179032 bytes (diff: -452)[0m
+[0;32mI (55131) TELEGRAM_BOT: Free heap antes de HTTP: 179676 bytes[0m
+[0;32mI (56331) MQTT_MANAGER: Cliente MQTT detenido correctamente[0m
+[0;32mI (56331) MAIN: MQTT desconectado[0m
+[0;32mI (56331) wifi:state: run -> init (0x0)[0m
+[0;32mI (56341) wifi:pm stop, total sleep time: 11119488 us / 16384242 us[0m
+
+[0;32mI (56341) wifi:<ba-del>idx:0, tid:0[0m
+[0;32mI (56341) wifi:new:<1,0>, old:<1,1>, ap:<1,1>, sta:<1,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (56351) esp-tls-mbedtls: mbedtls_ssl_handshake returned -0x004C[0m
+[0;32mI (56351) esp-tls-mbedtls: Certificate verified.[0m
+[1;31mE (56351) esp-tls: Failed to open new connection[0m
+[1;31mE (56361) transport_base: Failed to open a new connection[0m
+[1;31mE (56361) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (56371) TELEGRAM_BOT: HTTP GET falló: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (56371) TELEGRAM_BOT: Free heap después de HTTP: 191728 bytes (diff: 12052)[0m
+[0;32mI (56381) wifi:flush txq[0m
+[0;32mI (56381) wifi:stop sw txq[0m
+[0;32mI (56381) wifi:lmac stop hw txq[0m
+I (56491) MAIN: WiFi detenido, entrando en light sleep...
+[0;32mI (56491) MAIN: Despertando de light sleep[0m
+[0;32mI (56491) wifi:mode : sta (ec:e3:34:b3:be:70) + softAP (ec:e3:34:b3:be:71)[0m
+[0;32mI (56491) wifi:enable tsf[0m
+[0;32mI (56491) wifi:Total power save buffer number: 16[0m
+[0;32mI (56501) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (56501) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (56511) MAIN: Esperando reconexión WiFi...[0m
+[0;33mW (56551) wifi_manager: Reintentando conexión (1/5)[0m
+[1;31mE (56551) wifi:sta is connecting, return error[0m
+[0;32mI (56551) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+[0;32mI (56551) wifi:new:<1,1>, old:<1,1>, ap:<1,1>, sta:<1,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (56561) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (56581) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (56601) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (56621) wifi:connected with testwifi1, aid = 1, channel 1, BW20, bssid = 86:c3:da:74:39:c1[0m
+[0;32mI (56621) wifi:security: WPA2-PSK, phy: bgn, rssi: -42[0m
+[0;32mI (56631) wifi:pm start, type: 1[0m
+
+[0;32mI (56631) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (56691) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us[0m
+[0;32mI (56691) wifi:AP's beacon interval = 102400 us, DTIM period = 2[0m
+[0;32mI (58161) esp_netif_handlers: sta ip: 10.176.194.228, mask: 255.255.255.0, gw: 10.176.194.83[0m
+[0;32mI (58161) wifi_manager: Conectado. IP local: 10.176.194.228[0m
+[0;32mI (58511) MAIN: WiFi reconectado tras light sleep[0m
+[0;32mI (58511) MAIN: ADC reiniciado tras light sleep[0m
+[0;32mI (58511) MQTT_MANAGER: Cliente MQTT reiniciado correctamente[0m
+[0;32mI (58511) MAIN: MQTT reconectado tras light sleep[0m
+[0;32mI (58521) wifi:<ba-add>idx:0 (ifx:0, 86:c3:da:74:39:c1), tid:0, ssn:4, winSize:64[0m
+[0;32mI (59381) TELEGRAM_BOT: Free heap antes de HTTP: 179092 bytes[0m
+[0;32mI (60811) TELEGRAM_BOT: 📩 Mensaje recibido: a[0m
+[0;32mI (62421) TELEGRAM_BOT: Mensaje enviado (HTTP 200): ❓ Comando no reconocido.[0m
+Usa /help para ver la lista.
+[0;32mI (62431) TELEGRAM_BOT: Free heap después de HTTP: 178044 bytes (diff: -1048)[0m
+[0;32mI (65431) TELEGRAM_BOT: Free heap antes de HTTP: 178668 bytes[0m
+[0;32mI (66941) TELEGRAM_BOT: 📩 Mensaje recibido: aa[0m
+[1;31mE (68521) esp-tls: [sock=57] select() timeout[0m
+[1;31mE (68521) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (68521) mqtt_client: Error transport connect[0m
+[0;32mI (68521) MQTT_MANAGER: Publicado nivel de luz: 56%[0m
+[0;32mI (68521) MAIN: LDR: 7628.07 Ω, Luz: 56%[0m
+[0;33mW (68631) BME680_SENSOR: No se pudieron obtener datos válidos (-2)[0m
+[0;33mW (68631) MAIN: Error leyendo datos del BME680[0m
+[0;32mI (68631) MAIN: Preparando para entrar en light sleep 2000 ms...[0m
+[0;32mI (68631) MAIN: ADC detenido antes de dormir[0m
+[0;32mI (68781) TELEGRAM_BOT: Mensaje enviado (HTTP 200): ❓ Comando no reconocido.[0m
+Usa /help para ver la lista.
+[0;32mI (68791) TELEGRAM_BOT: Free heap después de HTTP: 177528 bytes (diff: -1140)[0m
+[0;32mI (71791) TELEGRAM_BOT: Free heap antes de HTTP: 178856 bytes[0m
+[0;32mI (73101) TELEGRAM_BOT: 📩 Mensaje recibido: aaa[0m
+[0;32mI (73521) MQTT_MANAGER: Cliente MQTT detenido correctamente[0m
+[0;32mI (73521) MAIN: MQTT desconectado[0m
+[0;32mI (73521) wifi:state: run -> init (0x0)[0m
+[0;32mI (73531) wifi:pm stop, total sleep time: 11756173 us / 16897752 us[0m
+
+[0;32mI (73531) wifi:<ba-del>idx:0, tid:0[0m
+[0;32mI (73531) wifi:new:<1,0>, old:<1,1>, ap:<1,1>, sta:<1,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (73581) wifi:flush txq[0m
+[0;32mI (73581) wifi:stop sw txq[0m
+[0;32mI (73581) wifi:lmac stop hw txq[0m
+I (73681) MAIN: WiFi detenido, entrando en light sleep...
+[0;32mI (73681) MAIN: Despertando de light sleep[0m
+[0;32mI (73681) wifi:mode : sta (ec:e3:34:b3:be:70) + softAP (ec:e3:34:b3:be:71)[0m
+[0;32mI (73681) wifi:enable tsf[0m
+[0;32mI (73681) wifi:Total power save buffer number: 16[0m
+[0;32mI (73691) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (73691) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (73701) MAIN: Esperando reconexión WiFi...[0m
+[0;33mW (73741) wifi_manager: Reintentando conexión (1/5)[0m
+[1;31mE (73741) wifi:sta is connecting, return error[0m
+[0;32mI (73741) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+[0;32mI (73751) wifi:new:<1,1>, old:<1,1>, ap:<1,1>, sta:<1,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (73751) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (73771) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (73791) wifi:state: assoc -> run (0x10)[0m
+[1;31mE (73801) esp-tls-mbedtls: mbedtls_ssl_handshake returned -0x004E[0m
+[0;32mI (73801) esp-tls-mbedtls: Certificate verified.[0m
+[1;31mE (73801) esp-tls: Failed to open new connection[0m
+[1;31mE (73811) transport_base: Failed to open a new connection[0m
+[1;31mE (73811) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (73821) TELEGRAM_BOT: Error enviando mensaje: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (73821) TELEGRAM_BOT: Free heap después de HTTP: 186488 bytes (diff: 7632)[0m
+[0;32mI (73861) wifi:connected with testwifi1, aid = 1, channel 1, BW20, bssid = 86:c3:da:74:39:c1[0m
+[0;32mI (73871) wifi:security: WPA2-PSK, phy: bgn, rssi: -39[0m
+[0;32mI (73871) wifi:pm start, type: 1[0m
+
+[0;32mI (73871) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (73951) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us[0m
+[0;32mI (73951) wifi:AP's beacon interval = 102400 us, DTIM period = 2[0m
+[0;32mI (74411) wifi:<ba-add>idx:0 (ifx:0, 86:c3:da:74:39:c1), tid:0, ssn:4, winSize:64[0m
+[0;32mI (74951) esp_netif_handlers: sta ip: 10.176.194.228, mask: 255.255.255.0, gw: 10.176.194.83[0m
+[0;32mI (74951) wifi_manager: Conectado. IP local: 10.176.194.228[0m
+[0;32mI (75201) MAIN: WiFi reconectado tras light sleep[0m
+[0;32mI (75201) MAIN: ADC reiniciado tras light sleep[0m
+[0;32mI (75201) MQTT_MANAGER: Cliente MQTT reiniciado correctamente[0m
+[0;32mI (75201) MAIN: MQTT reconectado tras light sleep[0m
+[0;32mI (76831) TELEGRAM_BOT: Free heap antes de HTTP: 178416 bytes[0m
+[0;32mI (78561) TELEGRAM_BOT: 📩 Mensaje recibido: aaaa[0m
+[0;32mI (80101) TELEGRAM_BOT: Mensaje enviado (HTTP 200): ❓ Comando no reconocido.[0m
+Usa /help para ver la lista.
+[0;32mI (80111) TELEGRAM_BOT: Free heap después de HTTP: 177764 bytes (diff: -652)[0m
+[0;32mI (83111) TELEGRAM_BOT: Free heap antes de HTTP: 178204 bytes[0m
+[0;32mI (84831) TELEGRAM_BOT: 📩 Mensaje recibido: aaaaa[0m
+[1;31mE (85211) esp-tls: [sock=57] select() timeout[0m
+[1;31mE (85211) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (85211) mqtt_client: Error transport connect[0m
+[0;32mI (85211) MQTT_MANAGER: Publicado nivel de luz: 56%[0m
+[0;32mI (85221) MAIN: LDR: 7628.07 Ω, Luz: 56%[0m
+[0;33mW (85321) BME680_SENSOR: No se pudieron obtener datos válidos (-2)[0m
+[0;33mW (85321) MAIN: Error leyendo datos del BME680[0m
+[0;32mI (85321) MAIN: Preparando para entrar en light sleep 2000 ms...[0m
+[0;32mI (85331) MAIN: ADC detenido antes de dormir[0m
+[0;32mI (86241) TELEGRAM_BOT: Mensaje enviado (HTTP 200): ❓ Comando no reconocido.[0m
+Usa /help para ver la lista.
+[0;32mI (86251) TELEGRAM_BOT: Free heap después de HTTP: 178412 bytes (diff: 208)[0m
+[0;32mI (89251) TELEGRAM_BOT: Free heap antes de HTTP: 178848 bytes[0m
+[0;32mI (90211) MQTT_MANAGER: Cliente MQTT detenido correctamente[0m
+[0;32mI (90211) MAIN: MQTT desconectado[0m
+[0;32mI (90211) wifi:state: run -> init (0x0)[0m
+[0;32mI (90221) wifi:pm stop, total sleep time: 10416454 us / 16345457 us[0m
+
+[0;32mI (90221) wifi:<ba-del>idx:0, tid:0[0m
+[0;32mI (90221) wifi:new:<1,0>, old:<1,1>, ap:<1,1>, sta:<1,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (90231) esp-tls-mbedtls: mbedtls_ssl_handshake returned -0x004C[0m
+[0;32mI (90231) esp-tls-mbedtls: Certificate verified.[0m
+[1;31mE (90231) esp-tls: Failed to open new connection[0m
+[1;31mE (90241) transport_base: Failed to open a new connection[0m
+[1;31mE (90241) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (90251) TELEGRAM_BOT: HTTP GET falló: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (90251) TELEGRAM_BOT: Free heap después de HTTP: 190872 bytes (diff: 12024)[0m
+[0;32mI (90271) wifi:flush txq[0m
+[0;32mI (90271) wifi:stop sw txq[0m
+[0;32mI (90271) wifi:lmac stop hw txq[0m
+I (90371) MAIN: WiFi detenido, entrando en light sleep...
+[0;32mI (90371) MAIN: Despertando de light sleep[0m
+[0;32mI (90371) wifi:mode : sta (ec:e3:34:b3:be:70) + softAP (ec:e3:34:b3:be:71)[0m
+[0;32mI (90371) wifi:enable tsf[0m
+[0;32mI (90371) wifi:Total power save buffer number: 16[0m
+[0;32mI (90381) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (90381) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (90391) MAIN: Esperando reconexión WiFi...[0m
+[0;33mW (90431) wifi_manager: Reintentando conexión (1/5)[0m
+[1;31mE (90431) wifi:sta is connecting, return error[0m
+[0;32mI (90431) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+[0;32mI (90431) wifi:new:<1,1>, old:<1,1>, ap:<1,1>, sta:<1,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (90441) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (90461) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (90511) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (90541) wifi:connected with testwifi1, aid = 1, channel 1, BW20, bssid = 86:c3:da:74:39:c1[0m
+[0;32mI (90541) wifi:security: WPA2-PSK, phy: bgn, rssi: -42[0m
+[0;32mI (90541) wifi:pm start, type: 1[0m
+
+[0;32mI (90541) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (90611) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us[0m
+[0;32mI (90611) wifi:AP's beacon interval = 102400 us, DTIM period = 2[0m
+[0;32mI (91631) esp_netif_handlers: sta ip: 10.176.194.228, mask: 255.255.255.0, gw: 10.176.194.83[0m
+[0;32mI (91631) wifi_manager: Conectado. IP local: 10.176.194.228[0m
+[0;32mI (91891) MAIN: WiFi reconectado tras light sleep[0m
+[0;32mI (91891) MAIN: ADC reiniciado tras light sleep[0m
+[0;32mI (91891) MQTT_MANAGER: Cliente MQTT reiniciado correctamente[0m
+[0;32mI (91891) MAIN: MQTT reconectado tras light sleep[0m
+[0;32mI (91941) wifi:<ba-add>idx:0 (ifx:0, 86:c3:da:74:39:c1), tid:0, ssn:4, winSize:64[0m
+[0;32mI (93261) TELEGRAM_BOT: Free heap antes de HTTP: 178212 bytes[0m
+[0;32mI (94631) TELEGRAM_BOT: 📩 Mensaje recibido: a[0m

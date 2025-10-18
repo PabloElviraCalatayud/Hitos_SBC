@@ -7,6 +7,7 @@ idf_component_register(
     "network/wifi_manager.c"
     "network/mqtt_manager.c"
     "utils/math_utils.c"
+    "utils/telegram_bot.c"
   INCLUDE_DIRS 
     "."
     "drivers"
@@ -19,6 +20,7 @@ idf_component_register(
     esp_event
     esp_netif
     esp_http_server
+    esp_http_client
     mqtt
     nvs_flash
     spiffs

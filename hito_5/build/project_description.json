@@ -1,7 +1,7 @@
 {
     "version":            "1.2",
     "project_name":       "hito_5",
-    "project_version":    "5671dfe-dirty",
+    "project_version":    "001b579-dirty",
     "project_path":       "/home/pelvira/Documents/Universidad/7_Septimo_Semestre/SBC/Hitos_SBC/hito_5",
     "idf_path":           "/home/pelvira/esp/esp-idf",
     "build_dir":          "/home/pelvira/Documents/Universidad/7_Septimo_Semestre/SBC/Hitos_SBC/hito_5/build",
@@ -1235,12 +1235,12 @@
             "dir": "/home/pelvira/Documents/Universidad/7_Septimo_Semestre/SBC/Hitos_SBC/hito_5/main",
             "type": "LIBRARY",
             "lib": "__idf_main",
-            "reqs": [ "esp_adc", "esp_wifi", "esp_event", "esp_netif", "esp_http_server", "mqtt", "nvs_flash", "spiffs", "driver", "json", "bme68x" ],
+            "reqs": [ "esp_adc", "esp_wifi", "esp_event", "esp_netif", "esp_http_server", "esp_http_client", "mqtt", "nvs_flash", "spiffs", "driver", "json", "bme68x" ],
             "priv_reqs": [],
             "managed_reqs": [],
             "managed_priv_reqs": [],
             "file": "/home/pelvira/Documents/Universidad/7_Septimo_Semestre/SBC/Hitos_SBC/hito_5/build/esp-idf/main/libmain.a",
-            "sources": [ "/home/pelvira/Documents/Universidad/7_Septimo_Semestre/SBC/Hitos_SBC/hito_5/main/main.c", "/home/pelvira/Documents/Universidad/7_Septimo_Semestre/SBC/Hitos_SBC/hito_5/main/drivers/adc_driver.c", "/home/pelvira/Documents/Universidad/7_Septimo_Semestre/SBC/Hitos_SBC/hito_5/main/sensors/ldr_sensor.c", "/home/pelvira/Documents/Universidad/7_Septimo_Semestre/SBC/Hitos_SBC/hito_5/main/sensors/bme680_sensor.c", "/home/pelvira/Documents/Universidad/7_Septimo_Semestre/SBC/Hitos_SBC/hito_5/main/network/wifi_manager.c", "/home/pelvira/Documents/Universidad/7_Septimo_Semestre/SBC/Hitos_SBC/hito_5/main/network/mqtt_manager.c", "/home/pelvira/Documents/Universidad/7_Septimo_Semestre/SBC/Hitos_SBC/hito_5/main/utils/math_utils.c" ],
+            "sources": [ "/home/pelvira/Documents/Universidad/7_Septimo_Semestre/SBC/Hitos_SBC/hito_5/main/main.c", "/home/pelvira/Documents/Universidad/7_Septimo_Semestre/SBC/Hitos_SBC/hito_5/main/drivers/adc_driver.c", "/home/pelvira/Documents/Universidad/7_Septimo_Semestre/SBC/Hitos_SBC/hito_5/main/sensors/ldr_sensor.c", "/home/pelvira/Documents/Universidad/7_Septimo_Semestre/SBC/Hitos_SBC/hito_5/main/sensors/bme680_sensor.c", "/home/pelvira/Documents/Universidad/7_Septimo_Semestre/SBC/Hitos_SBC/hito_5/main/network/wifi_manager.c", "/home/pelvira/Documents/Universidad/7_Septimo_Semestre/SBC/Hitos_SBC/hito_5/main/network/mqtt_manager.c", "/home/pelvira/Documents/Universidad/7_Septimo_Semestre/SBC/Hitos_SBC/hito_5/main/utils/math_utils.c", "/home/pelvira/Documents/Universidad/7_Septimo_Semestre/SBC/Hitos_SBC/hito_5/main/utils/telegram_bot.c" ],
             "include_dirs": [ ".", "drivers", "sensors", "network", "utils" ]
         },
         "mbedtls": {
@@ -2922,7 +2922,7 @@
             "prefix": "idf",
             "dir": "/home/pelvira/Documents/Universidad/7_Septimo_Semestre/SBC/Hitos_SBC/hito_5/main",
             "lib": "__idf_main",
-            "reqs": [ "esp_adc", "esp_wifi", "esp_event", "esp_netif", "esp_http_server", "mqtt", "nvs_flash", "spiffs", "driver", "json", "bme68x" ],
+            "reqs": [ "esp_adc", "esp_wifi", "esp_event", "esp_netif", "esp_http_server", "esp_http_client", "mqtt", "nvs_flash", "spiffs", "driver", "json", "bme68x" ],
             "priv_reqs": [],
             "managed_reqs": [],
             "managed_priv_reqs": [],
