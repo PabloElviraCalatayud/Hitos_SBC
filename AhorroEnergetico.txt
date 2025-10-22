@@ -1,0 +1,8 @@
+Especificación de la política de ahorro energético:
+
+Para el ahorro energético se ha considerado óptimo que la placa entre
+en modo light sleep cada t segundos. Se ha considerado el modo light
+sleep como el más óptimo debido a que se están mandando datos cada pocos
+segundos por lo que es necesario que la placa tarde poco en pasar de modoreposo a modo activo. En el caso de que se quisiesen mandar datos cada
+varios minutos se considera más óptimo el modo de deep sleep.
+

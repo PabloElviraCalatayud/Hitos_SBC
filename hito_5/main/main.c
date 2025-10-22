@@ -67,7 +67,7 @@ static void enter_light_sleep_ms(uint32_t ms, adc_continuous_handle_t adc_handle
     vTaskDelay(pdMS_TO_TICKS(500));
   }
   ESP_LOGI(TAG, "WiFi reconectado tras light sleep");
-
+  vTaskDelay(pdMS_TO_TICKS(3000));
   if (adc_handle) {
     adc_continuous_start(adc_handle);
     ESP_LOGI(TAG, "ADC reiniciado tras light sleep");
