@@ -111,7 +111,21 @@ static esp_err_t scan_get_handler(httpd_req_t *req) {
   esp_wifi_scan_get_ap_records(&ap_num, ap_records);
 
   httpd_resp_set_type(req, "text/html");
-  httpd_resp_sendstr_chunk(req, "<html><body><h2>Redes WiFi disponibles</h2>");
+  httpd_resp_sendstr_chunk(req,
+    "<!DOCTYPE html><html><head>"
+    "<meta charset='UTF-8'>"
+    "<style>"
+    "body{font-family:Arial, sans-serif; background:#f7f9fb; display:flex; flex-direction:column; align-items:center; justify-content:center; height:100vh; margin:0;}"
+    "h2{color:#333; margin-bottom:20px;}"
+    ".card{background:white; padding:25px; border-radius:12px; box-shadow:0 4px 10px rgba(0,0,0,0.1); width:90%; max-width:400px; text-align:center;}"
+    "form{margin-bottom:15px;}"
+    "input[type=password]{padding:8px; width:80%; margin:8px 0; border:1px solid #ccc; border-radius:6px;}"
+    "input[type=submit]{background:#0078D7; color:white; border:none; padding:8px 16px; border-radius:6px; cursor:pointer; transition:background 0.2s;}"
+    "input[type=submit]:hover{background:#005fa3;}"
+    "hr{border:none; height:1px; background:#eee; margin:15px 0;}"
+    "</style></head><body><div class='card'><h2>Redes WiFi disponibles</h2>"
+  );
+
   for (int i = 0; i < ap_num; i++) {
     char ssid[33];
     memcpy(ssid, ap_records[i].ssid, sizeof(ap_records[i].ssid));
@@ -119,16 +133,16 @@ static esp_err_t scan_get_handler(httpd_req_t *req) {
     char line[512];
     snprintf(line, sizeof(line),
       "<form method='POST' action='/config'>"
-      "<b>%s</b> (%d dBm)<br>"
+      "<b>%s</b> <small>(%d dBm)</small><br>"
       "<input type='hidden' name='ssid' value='%s'>"
-      "Contraseña: <input type='password' name='pass'><br>"
+      "<input type='password' name='pass' placeholder='Contraseña'><br>"
       "<input type='submit' value='Conectar'></form><hr>",
       ssid, ap_records[i].rssi, ssid);
     httpd_resp_sendstr_chunk(req, line);
   }
-  httpd_resp_sendstr_chunk(req, "</body></html>");
-  httpd_resp_sendstr_chunk(req, NULL);
 
+  httpd_resp_sendstr_chunk(req, "</div></body></html>");
+  httpd_resp_sendstr_chunk(req, NULL);
   free(ap_records);
   return ESP_OK;
 }

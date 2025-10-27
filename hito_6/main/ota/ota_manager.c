@@ -108,21 +108,35 @@ static esp_err_t ota_post_handler(httpd_req_t *req) {
 
 static esp_err_t ota_get_handler(httpd_req_t *req) {
   const char *html =
-    "<h2>Actualizar firmware OTA</h2>"
-    "<input type='file' id='firmware'><br><br>"
-    "<button onclick='upload()'>Actualizar</button>"
+    "<!DOCTYPE html><html><head>"
+    "<meta charset='UTF-8'>"
+    "<style>"
+    "body{font-family:Arial, sans-serif; background:#f7f9fb; display:flex; justify-content:center; align-items:center; height:100vh; margin:0;}"
+    ".card{background:white; padding:30px; border-radius:12px; box-shadow:0 4px 10px rgba(0,0,0,0.1); text-align:center; width:90%; max-width:400px;}"
+    "h2{color:#333; margin-bottom:20px;}"
+    "input[type=file]{margin-bottom:20px;}"
+    "button{background:#0078D7; color:white; border:none; padding:10px 20px; border-radius:6px; cursor:pointer; transition:background 0.2s;}"
+    "button:hover{background:#005fa3;}"
+    "#log{margin-top:20px; color:#444; font-size:0.9em; white-space:pre-line; text-align:left;}"
+    "</style></head><body>"
+    "<div class='card'>"
+    "<h2>Actualización OTA</h2>"
+    "<input type='file' id='firmware' accept='.bin'><br>"
+    "<button onclick='upload()'>Subir y actualizar</button>"
     "<pre id='log'></pre>"
+    "</div>"
     "<script>"
     "async function upload(){"
       "const file=document.getElementById('firmware').files[0];"
       "const log=document.getElementById('log');"
-      "if(!file){alert('Selecciona un archivo');return;}"
+      "if(!file){alert('Selecciona un archivo .bin');return;}"
       "log.textContent='Subiendo '+file.name+' ('+file.size+' bytes)...';"
       "const res=await fetch('/update',{method:'POST',headers:{'Content-Type':'application/octet-stream'},body:file});"
-      "if(res.ok){log.textContent='Actualización enviada correctamente. Reiniciando...';}"
-      "else{log.textContent='Error al enviar la actualización: '+res.status;}"
+      "if(res.ok){log.textContent+='\\nActualización completada. Reiniciando...';}"
+      "else{log.textContent+='\\nError en la actualización: '+res.status;}"
     "}"
-    "</script>";
+    "</script>"
+    "</body></html>";
 
   httpd_resp_set_type(req, "text/html");
   httpd_resp_sendstr(req, html);
