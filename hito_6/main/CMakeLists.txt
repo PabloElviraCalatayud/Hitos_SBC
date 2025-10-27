@@ -1,0 +1,20 @@
+idf_component_register(
+  SRCS
+    "main.c"
+    "network/wifi_manager.c"
+    "ota/ota_manager.c"
+  INCLUDE_DIRS
+    "."
+    "network"
+    "ota"
+  REQUIRES
+    esp_wifi
+    esp_event
+    esp_netif
+    esp_http_server
+    nvs_flash
+    spiffs
+  PRIV_REQUIRES
+    app_update
+)
+
