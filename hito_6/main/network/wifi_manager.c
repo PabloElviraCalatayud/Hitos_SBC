@@ -162,6 +162,13 @@ static void start_webserver(void) {
   httpd_config_t config = HTTPD_DEFAULT_CONFIG();
   config.server_port = 80;
 
+  // Ajustes para evitar timeouts durante subidas OTA grandes
+  config.stack_size = 8192;               // más stack para la tarea del servidor
+  config.recv_wait_timeout = 10;          // segundos de espera para recv
+  config.send_wait_timeout = 10;          // segundos
+  config.lru_purge_enable = true;
+  config.max_open_sockets = 6;
+
   if (httpd_start(&server, &config) == ESP_OK) {
     ESP_LOGI(TAG, "Servidor HTTP iniciado en el puerto %d", config.server_port);
 
@@ -228,6 +235,7 @@ void wifi_manager_init(void) {
   }
 
   ESP_ERROR_CHECK(esp_wifi_start());
+  ESP_ERROR_CHECK(esp_wifi_set_ps(WIFI_PS_NONE));
   start_webserver();
 
   ESP_LOGI(TAG, "Punto de acceso iniciado: %s", ap_ssid);

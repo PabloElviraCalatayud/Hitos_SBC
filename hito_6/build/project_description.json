@@ -1,7 +1,7 @@
 {
     "version":            "1.2",
     "project_name":       "hito_6",
-    "project_version":    "87f8f52-dirty",
+    "project_version":    "df43fac-dirty",
     "project_path":       "/home/pelvira/Documents/Universidad/7_Septimo_Semestre/SBC/Hitos_SBC/hito_6",
     "idf_path":           "/home/pelvira/esp/esp-idf",
     "build_dir":          "/home/pelvira/Documents/Universidad/7_Septimo_Semestre/SBC/Hitos_SBC/hito_6/build",
